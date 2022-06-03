@@ -15,7 +15,7 @@ int main(void)
 		putchar(i);
 		i++;
 		if (i == 101 || i == 113)
-			continue;
+			i++;
 	}
 	putchar(10);
 
