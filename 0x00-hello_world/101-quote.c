@@ -1,17 +1,18 @@
 #include <stdio.h>
 /*
- * main - Entry point
  *
- * Printing to standard error
+ * main:  Printing to standard error
  *
  *
- * return 1 - an error occurs
+ * return: an error occurs (1)
  *
  */
 
 int main(void)
+
 {
-	fwrite("and that piece of art is useful\" - Dora Korpar, 2015-10-19", 60, 1, stderr);
+	fwrite("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n",
+			 59, 1, stderr);
 	return (1);
 }
 
