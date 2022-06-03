@@ -1,10 +1,14 @@
 #include <stdio.h>
-/*
+
+/**
+ * main - Entry Point
  *
- * main:  Printing to standard error
+ * Description: This is a longer description.
+ * Dont forget your line should not be more than 80 characters.
+ * But you are totally free to descripe yout functions.
  *
  *
- * return: an error occurs (1)
+ * Return: an error occurs (1)
  *
  */
 
