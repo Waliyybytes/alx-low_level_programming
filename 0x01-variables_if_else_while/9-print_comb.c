@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Entry point , prints combinations of single digits 
+ * main - Entry point , prints combinations of single digits
  *
  * Return: Always zero(success)
  */
@@ -13,6 +13,8 @@ int main(void)
 	while (i < 58)
 	{
 		putchar(i);
+		if (i == 57)
+			break;
 		putchar(44);
 		putchar(32);
 		i++;
