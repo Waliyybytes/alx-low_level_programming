@@ -7,17 +7,16 @@
 
 int main(void)
 {
-	int k=0;
+	int k = 0;
 
-	while(k < 8)
+	while (k < 9)
 	{
 
-		int i = 49+k;
-		int j = 48+k;
+		int i = 49 + k;
+		int j = 48 + k;
 
 		while (i < 58)
 		{
-			
 			if (j != i)
 			{
 				putchar(j);
