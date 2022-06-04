@@ -26,7 +26,7 @@ int main(void)
 					putchar(k);
 					putchar(j);
 					putchar(i);
-					if (k == 58)
+					if (k == 55)
 						break;
 					putchar(44);
 					putchar(32);
