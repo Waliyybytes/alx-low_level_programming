@@ -6,9 +6,10 @@
  * Return: 0 is success
  *
  */
+
 void print_alphabet(void)
 {
-	char alpha_low_case = "abcdefghijklmopqrstuvwxyz"
+	char alpha_low_case[] = "abcdefghijklmopqrstuvwxyz"
 	int i;
 
 	for (i = 0; alpha_low_case[i]; i++)
