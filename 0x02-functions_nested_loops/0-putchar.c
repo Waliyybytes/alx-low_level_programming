@@ -15,5 +15,5 @@ int main(void)
 	for (i = 0; streak[i]; i++)
 		_putchar(streak[i]);
 	_putchar('\n');
-	return 0;
+	return (0);
 }
