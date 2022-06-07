@@ -6,11 +6,12 @@
  * Return: 0 is success
  *
  */
-void print_alphabet()
+void print_alphabet(void)
 {
+	char alpha_low_case = "abcdefghijklmopqrstuvwxyz"
 	int i;
 
-	for (i = 97; i < 123; i++)
-		_putchar(i);
+	for (i = 0; alpha_low_case[i]; i++)
+		_putchar(alpha_low_case[i]);
 	_putchar('\n');
 }
