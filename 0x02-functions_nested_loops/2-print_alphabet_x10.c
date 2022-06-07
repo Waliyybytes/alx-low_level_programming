@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_alphabet- this is a function that print alphabets in lower case
+ * print_alphabet_x10- this is a function that print alphabets in lower case
  *
  * Return: 0 is success
  *
  */
 
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	for (int j = 0; j < 10; j++)
 	{
