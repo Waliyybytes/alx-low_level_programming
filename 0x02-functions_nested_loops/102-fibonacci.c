@@ -12,7 +12,7 @@ int main(void)
 {
 	int a = 0;
 	int b = 1;
-	long long int next = a + b;
+	long next = a + b;
 	int i;
 
 	printf("%d, %d, ", a, b);
@@ -22,9 +22,9 @@ int main(void)
 		b = next;
 		next = a + b;
 		if (i < 49)
-			printf("%lli, ", next);
+			printf("%ld, ", next);
 		else
-			printf("%lli\n", next);
+			printf("%ld\n", next);
 	}
 	return (0);
 }
