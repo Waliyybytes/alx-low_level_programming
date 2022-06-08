@@ -10,9 +10,9 @@
 
 int main(void)
 {
-	unsigned long a = 1;
-	unsigned long b = 2;
-	unsigned long next = a + b;
+	uint64_t a = ;
+	uint64_t b = 2;
+	uint64_t next = a + b;
 	int i;
 
 	printf("%lu, %lu, %lu, ", a, b, next);
