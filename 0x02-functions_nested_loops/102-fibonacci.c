@@ -15,8 +15,8 @@ int main(void)
 	long next = a + b;
 	int i;
 
-	printf("%ld, %ld, ", a, b);
-	for (i = 3; i <= 50; i++)
+	printf("%ld, %ld, %ld, ", a, b, next);
+	for (i = 4; i <= 50; i++)
 	{
 		a = b;
 		b = next;
