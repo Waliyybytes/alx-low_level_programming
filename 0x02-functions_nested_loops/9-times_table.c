@@ -25,7 +25,7 @@ void times_table(void)
 			_putchar('0' + prod % 10);
 			if (i != 9)
 				_putchar(44);
-			_putchar(32);
+				_putchar(32);
 			if (!(j * (i + 1) > 9))
 				_putchar(32);
 		}
