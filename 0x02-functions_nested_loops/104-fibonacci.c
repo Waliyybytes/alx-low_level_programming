@@ -10,9 +10,9 @@
 
 int main(void)
 {
-	u_int64_t u_int64_t a = 1;
-	u_int64_t u_int64_t b = 2;
-	u_int64_t u_int64_t next = a + b;
+	uintmax_t a = 1;
+	uintmax_t b = 2;
+	uintmax_t next = a + b;
 	int i;
 
 	printf("%llu, %llu, %llu, ", a, b, next);
