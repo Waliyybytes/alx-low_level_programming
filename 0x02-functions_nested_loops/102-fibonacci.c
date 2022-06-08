@@ -16,14 +16,14 @@ int main(void)
 	int i;
 
 	printf("%ld, %ld, ", a, b);
-	for (i = 0; i < 50; i++)
+	for (i = 1; i <= 50; i++)
 	{
 		a = b;
 		b = next;
 		next = a + b;
-		if (i < 49)
+		if (i < 50)
 			printf("%ld, ", next);
-		else
+		if (i == 50)
 			printf("%ld\n", next);
 	}
 	return (0);
