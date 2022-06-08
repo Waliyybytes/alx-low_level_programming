@@ -10,12 +10,12 @@
 
 int main(void)
 {
-	long a = 1;
-	long b = 2;
+	unsigned long a = 1;
+	unsigned long b = 2;
 	unsigned long next = a + b;
 	int i;
 
-	printf("%ld, %ld, %lu, ", a, b, next);
+	printf("%lu, %lu, %lu, ", a, b, next);
 	for (i = 4; i <= 100; i++)
 	{
 		a = b;
