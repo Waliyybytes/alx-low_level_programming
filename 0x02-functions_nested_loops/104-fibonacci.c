@@ -15,16 +15,16 @@ int main(void)
 	u_int64_t next = a + b;
 	int i;
 
-	printf("%lu, %lu, %lu, ", a, b, next);
+	printf("%llu, %llu, %llu, ", a, b, next);
 	for (i = 4; i <= 98; i++)
 	{
 		a = b;
 		b = next;
 		next = a + b;
 		if (i < 98)
-			printf("%lu, ", next);
+			printf("%llu, ", next);
 		if (i == 98)
-			printf("%lu\n", next);
+			printf("%llu\n", next);
 	}
 	return (0);
 }
