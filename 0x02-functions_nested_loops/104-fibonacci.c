@@ -12,19 +12,19 @@ int main(void)
 {
 	long a = 1;
 	long b = 2;
-	unsigned long long next = a + b;
+	unsigned long next = a + b;
 	int i;
 
-	printf("%ld, %ld, %llu, ", a, b, next);
+	printf("%ld, %ld, %lu, ", a, b, next);
 	for (i = 4; i <= 100; i++)
 	{
 		a = b;
 		b = next;
 		next = a + b;
 		if (i < 100)
-			printf("%llu, ", next);
+			printf("%lu, ", next);
 		if (i == 100)
-			printf("%llu\n", next);
+			printf("%lu\n", next);
 	}
 	return (0);
 }
