@@ -35,3 +35,9 @@ void jack_bauer(void);
 
 void times_table(void);
 
+/* function to add and return result */
+
+int add(int, int)
+
+
+
