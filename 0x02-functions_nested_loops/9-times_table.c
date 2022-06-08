@@ -19,13 +19,14 @@ void times_table(void)
 		for (i = 0; i < 10; i++)
 		{
 			int prod = i * j;
+
 			if (prod > 9)
 				_putchar('0' + prod / 10);
 			_putchar('0' + prod % 10);
 			if (i != 9)
 				_putchar(44);
 			_putchar(32);
-			if (!( j * (i+1) > 9))
+			if (!(j * (i + 1) > 9))
 				_putchar(32);
 		}
 		_putchar(10);
