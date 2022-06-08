@@ -22,9 +22,9 @@ int main(void)
 		b = next;
 		next = a + b;
 		if (i < 49)
-			printf("%d, ", next);
+			printf("%Lf, ", next);
 		else
-			printf("%d\n", next);
+			printf("%Lf\n", next);
 	}
 	return (0);
 }
