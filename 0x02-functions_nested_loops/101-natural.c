@@ -2,13 +2,13 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * compute- this is a function  to compute a sum
+ * multiple_sum- this is a function  to compute a sum
  *
  * Return: 0 is success
  *
  */
 
-int compute(void)
+int multiple_sum(void)
 {
 	int sum = 0;
 	int i;
