@@ -4,7 +4,7 @@
 /**
  * main- this is a function  to compute a sum
  *
- * Return: a value of sum is success
+ * Return: 0 is success
  *
  */
 
@@ -16,6 +16,7 @@ int main(void)
 	for (i = 0; i < 1024; i++)
 		if ((i % 3 == 0) || (i % 5 == 0))
 			sum += i;
-
-	return (sum);
+	
+	printf("%d\n", sum);
+	return (0);
 }
