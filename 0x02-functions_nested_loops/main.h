@@ -17,3 +17,7 @@ int _islower(int c);
 /* to check if alphabet */
 
 int _isalpha(int c);
+
+/* to check the sign of a num */
+
+int print_sign(int n);
