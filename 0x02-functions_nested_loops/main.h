@@ -47,5 +47,9 @@ void print_to_98(int n);
 
 void print_times_table(int n);
 
+/* function to compute multiples of 3 or 5 */
+
+int compute(void);
+
 
 
