@@ -33,9 +33,9 @@ void print_times_table(int n)
 					_putchar(44);
 					_putchar(32);
 				}
-				if (j * (i + 1) < 100)
+				if (j * (i + 1) < 100 && i != n)
 					_putchar(32);
-				if (j * (i + 1) < 10)
+				if (j * (i + 1) < 10 && i != n)
 					_putchar(32);
 			}
 			_putchar(10);
