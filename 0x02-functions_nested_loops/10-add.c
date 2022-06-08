@@ -4,7 +4,8 @@
 /**
  * add- this is a function to add two integers and return result
  *
- * @a ,b: characters to be checked
+ * @a: characters to be checked
+ * @b: charcters to be checked
  * Return: 0 is success
  *
  */
