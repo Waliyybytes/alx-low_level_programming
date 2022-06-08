@@ -16,7 +16,7 @@ int main(void)
 	int i;
 
 	printf("%lu, %lu, %lu, ", a, b, next);
-	for (i = 4; i <= 100; i++)
+	for (i = 4; i <= 95; i++)
 	{
 		a = b;
 		b = next;
