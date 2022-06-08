@@ -25,3 +25,6 @@ int print_sign(int n);
 /* to get absolute value of a num */
 int _abs(int);
 
+/* to print last digit */
+int print_last_digit(int);
+
