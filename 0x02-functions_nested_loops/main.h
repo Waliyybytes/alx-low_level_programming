@@ -37,7 +37,7 @@ void times_table(void);
 
 /* function to add and return result */
 
-int add(int, int)
+int add(int, int);
 
 
 
