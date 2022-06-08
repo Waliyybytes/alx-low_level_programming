@@ -15,11 +15,16 @@ int main(void)
 	int next = a + b;
 	int i;
 
+	printf("%d, %d, ", a, b);
 	for (i = 0; i < 50; i++)
 	{
 		a = b;
 		b = next;
 		next = a + b;
+		if (i < 49)
+			printf("%d, ", next);
+		else
+			printf("%d\n", next);
 	}
 	return (0);
 }
