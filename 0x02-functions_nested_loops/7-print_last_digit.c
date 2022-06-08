@@ -11,5 +11,8 @@
 
 int print_last_digit(int c)
 {
-	return (abs(c) % 10);
+	int i;
+
+	for ( i = 0; i < 2; i++)
+		return (abs(c) % 10);
 }
