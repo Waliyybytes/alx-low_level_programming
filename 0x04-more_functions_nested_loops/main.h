@@ -1,3 +1,3 @@
 /* to check lower case */
 
-int _islower(int);
+int _isupper(int);
