@@ -9,3 +9,7 @@ int _isdigit(int);
 /* to multiply two digits */
 
 int mul(int, int);
+
+/* to print a charcter */
+
+int _putchar(int);
