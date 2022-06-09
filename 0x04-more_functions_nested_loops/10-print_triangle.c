@@ -4,19 +4,19 @@
 /**
 * print_triangle- this is a function to check for a digit
 *
-* @n: given length of triangle
+* @size: given size of triangle
 */
 
-void print_triangle(int n)
+void print_triangle(int size)
 {
 	int i;
 	int j;
 
-	for (i = 1; i <= n; i++)
+	for (i = 1; i <= size; i++)
 	{
-		for (j = n; j > 0; j--)
+		for (j = size; j > 0; j--)
 		{
-			if (i >= j)
+			if (size >= j)
 				_putchar('#');
 			else
 				_putchar(' ');
