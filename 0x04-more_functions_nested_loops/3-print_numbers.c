@@ -4,8 +4,6 @@
 /**
  * print_numbers- this is a function to check for a digit
  *
- * Return: 1 is success
- *
  */
 
 void print_numbers(void)

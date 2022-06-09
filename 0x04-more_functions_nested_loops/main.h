@@ -13,3 +13,7 @@ int mul(int, int);
 /* to print a charcter */
 
 int _putchar(int);
+
+/* print numbers */
+
+void print_numbers(void);
