@@ -2,11 +2,11 @@
 #include "main.h"
 #include <ctype.h>
 /**
- * print_more_numbers- this is a function to check for a digit
+ * more_numbers- this is a function to check for a digit
  *
  */
 
-void print_more_numbers(void)
+void more_numbers(void)
 {
 	int i;
 	int j;
