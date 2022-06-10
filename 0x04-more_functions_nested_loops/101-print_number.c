@@ -16,12 +16,15 @@ void print_number(int n)
 	{
 		int a = n;
 
-		n = abs(n);
-		for (i = 10; i < n; i *= 10)
+		if (a < 0)
+		{
+			n = -n;
+			_putchar('-');
+		}
+
+		for (i = 1; i <= n; i *= 10)
 			cuns = i;
 
-		if (a < 0)
-			_putchar('-');
 		while (cuns != 0)
 		{
 			_putchar('0' + n / cuns);
@@ -31,5 +34,3 @@ void print_number(int n)
 		_putchar('\n');
 	}
 	else
-		_putchar('0');
-}
