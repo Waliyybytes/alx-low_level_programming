@@ -17,7 +17,7 @@ void print_number(int n)
 		int a = n;
 
 		n = abs(n);
-		for (i = 0; i < n; i *= 10)
+		for (i = 10; i < n; i *= 10)
 			cuns = i;
 
 		if (a < 0)
