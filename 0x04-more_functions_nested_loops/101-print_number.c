@@ -12,14 +12,24 @@ void print_number(int n)
 	int i;
 	int cuns;
 
-	for (i = 0; i < n; i *= 10)
-		cuns = i;
-
-	while (cuns != 0)
+	if (n > 0 || n < 0)
 	{
-		_putchar('0' + n / cuns);
-		n %= cuns;
-		cuns /= 10;
+		int a = n;
+
+		n = abs(n);
+		for (i = 0; i < n; i *= 10)
+			cuns = i;
+
+		if (a < 0)
+			_putchar('-');
+		while (cuns != 0)
+		{
+			_putchar('0' + n / cuns);
+			n %= cuns;
+			cuns /= 10;
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
+	else
+		_putchar('0);
 }
