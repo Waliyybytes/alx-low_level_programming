@@ -31,13 +31,9 @@ void print_number(int n)
 			n %= cuns;
 			cuns /= 10;
 		}
-		_putchar('\n');
 	}
 	else
-	{
 		_putchar('0');
-		_putchar('\n');
-	}
 
 }
 
