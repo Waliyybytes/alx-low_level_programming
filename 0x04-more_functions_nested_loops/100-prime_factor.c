@@ -9,9 +9,9 @@
 
 int main(void)
 {
-	long long i;
-	long long  prime;
-	long long n = 612852475143;
+	unsigned long i;
+	unsigned long  prime;
+	unsigned long n = 612852475143;
 
 	for (i = 2; i <= n; i++)
 	{
@@ -21,6 +21,6 @@ int main(void)
 			n = n / i;
 		}
 	}
-	printf("%lld\n", prime);
+	printf("%lu\n", prime);
 	return (0);
 }
