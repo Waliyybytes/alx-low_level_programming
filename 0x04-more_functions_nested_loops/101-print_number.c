@@ -9,8 +9,8 @@
 
 void print_number(int n)
 {
-	int i;
-	int cuns;
+	unsigned int i;
+	unsigned int cuns;
 
 	if (n > 0 || n < 0)
 	{
