@@ -13,3 +13,7 @@ int _strlen(char *);
 /* print to stdout */
 
 void _puts(char *);
+
+char _putchar(char);
+
+void print_rev(char *);
