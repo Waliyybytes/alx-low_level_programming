@@ -9,3 +9,7 @@ void swap_int(int *, int *);
 /* to get length of a string */
 
 int _strlen(char *);
+
+/* print to stdout */
+
+void _puts(char *);
