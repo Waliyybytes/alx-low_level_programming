@@ -2,7 +2,7 @@
 #include "main.h"
 #include <string.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
  * _atoi - prints to stdout with a new line
  *
@@ -14,6 +14,7 @@ int _atoi(char *s)
 {
 	int i = 0;
 	int count = 0;
+	int res = 0;
 
 	while (!isdigit(s[i]))
 	{
@@ -21,8 +22,6 @@ int _atoi(char *s)
 			count++;
 		i++;
 	}
-
-	int res = 0;
 
 	while (isdigit(s[i]))
 	{
