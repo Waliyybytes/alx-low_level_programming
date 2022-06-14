@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	int password_length = 14;
+	int password_length = 15;
 	int i;
 
 	char list[] = "1234567890qwertyuiopasdfghjklzxcvbnm!@#$%^&*()_- +=QWERTYUIOPASDFGHJKLZXCVBNM[]{};':\"<>,.?/|";
@@ -20,7 +20,6 @@ int main(void)
 	{
 		printf("%c", list[rand() % (sizeof(list) - 1)]);
 	}
-	printf("\n");
 	return (0);
 
 }
