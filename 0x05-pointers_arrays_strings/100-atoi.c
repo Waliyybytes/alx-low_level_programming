@@ -16,11 +16,15 @@ int _atoi(char *s)
 	int count = 0;
 	int res = 0;
 
+	if (strlen(s) == 0)
+		return (0);
 	while (!isdigit(s[i]))
 	{
 		if (s[i] == '-')
 			count++;
 		i++;
+		if (i == strlen(s))
+			return (0);
 	}
 
 	while (isdigit(s[i]))
