@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <limits.h>
 /**
  * _atoi - prints to stdout with a new line
  *
@@ -30,6 +31,13 @@ int _atoi(char *s)
 
 	while (isdigit(s[i]))
 	{
+		if (res > INT_MAX / 10 || (res == INT_MAX / 10  && s[i] - '0' > 7))
+		{
+			if (count % 2 != 0)
+				return (INT_MIN);
+			else
+				return (INT_MAX);
+		}
 		res = res * 10 + s[i] - '0';
 		i++;
 	}
