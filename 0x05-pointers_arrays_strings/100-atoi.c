@@ -15,6 +15,7 @@ int _atoi(char *s)
 	int i = 0;
 	int count = 0;
 	int res = 0;
+	int len = strlen(s);
 
 	if (strlen(s) == 0)
 		return (0);
@@ -23,7 +24,7 @@ int _atoi(char *s)
 		if (s[i] == '-')
 			count++;
 		i++;
-		if (i == strlen(s))
+		if (i == len)
 			return (0);
 	}
 
