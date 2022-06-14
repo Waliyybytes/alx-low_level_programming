@@ -31,7 +31,7 @@ int _atoi(char *s)
 
 	while (isdigit(s[i]))
 	{
-		if (res > INT_MAX / 10 || (res == INT_MAX / 10  && s[i] - '0' > 7))
+		if (res >= INT_MAX / 10 || (res == INT_MAX / 10  && s[i] - '0' > 7))
 		{
 			if (count % 2 != 0)
 				return (INT_MIN);
