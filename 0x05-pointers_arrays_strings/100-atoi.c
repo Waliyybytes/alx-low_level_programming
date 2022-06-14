@@ -12,6 +12,26 @@
 
 int _atoi(char *s)
 {
-	return (atoi(s));
+	int i = 0;
+	int count = 0;
+
+	while (!isdigit(s[i]))
+	{
+		if (s[i] == '-')
+			count++;
+		i++;
+	}
+
+	int res = 0;
+
+	while (isdigit(s[i]))
+	{
+		res = res * 10 + s[i] - '0';
+		i++;
+	}
+	if (count % 2 != 0)
+		return (-1 * res);
+	else
+		return (res);
 }
 
