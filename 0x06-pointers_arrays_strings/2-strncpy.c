@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <main.h>
+#include "main.h"
 /**
  * *_strncpy - function to copy strings with at most n bytes
  *

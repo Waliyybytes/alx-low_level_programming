@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <main.h>
+#include "main.h"
 /**
  * *_strncat - function to concatenate strings with at most n bytes
  *
