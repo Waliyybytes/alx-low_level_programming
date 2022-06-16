@@ -13,7 +13,7 @@ char *leet(char *s)
 	int i;
 	int len = strlen(s);
 
-	for ( i = 0; i < len; i++)
+	for (i = 0; i < len; i++)
 	{
 		if (s[i] == 'a' || s[i] == 'A')
 			s[i] = 4;
