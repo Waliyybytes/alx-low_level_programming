@@ -16,6 +16,7 @@ char *rot13(char *s)
 		"lmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	int lon = strlen(lower);
 	char temp;
+	int j;
 
 	i=0;
 	while(isalpha(s[i]))
