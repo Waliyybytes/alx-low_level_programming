@@ -18,3 +18,4 @@ char *leet(char *);
 
 char *rot13(char *);
 
+int _putchar(int);
