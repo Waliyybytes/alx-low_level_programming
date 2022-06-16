@@ -1,31 +1,28 @@
 #include "main.h"
 #include <string.h>
-
-/*
- * *leet(char *) - to encode some letters
+#include <ctype.h>
+/**
+ * *leet - to encode some letters
  *
  * @s: string to encode
- * Return : an encoded string
+ * Return: an encoded string
  */
 
 char *leet(char *s)
 {
 	int i;
 	int len = strlen(s);
+	char encode[] = {'a', 'A', '4', '4', 'e', 'E', '3',
+		'3', 'o', 'O', '0', '0', 't', 'T', '7', '7', 'l', 'L', '1', '1'};
+	int j;
 
 	for (i = 0; i < len; i++)
 	{
-		if (s[i] == 'a' || s[i] == 'A')
-			s[i] = 4;
-		if (s[i] == 'e' || s[i] == 'E')
-			s[i] = 3;
-		if (s[i] == 'o' || s[i] == 'O')
-			s[i] = 0;
-		if (s[i] == 't' || s[i] == 'T')
-			s[i] = 7;
-		if (s[i] == 'l' || s[i] == 'L')
-			s[i] = 1;
+		for (j = 0; j < 20; j++)
+		{
+			if (encode[j] == s[i] && isalpha(encode[j]))
+				s[i] = encode[j + 2];
+		}
 	}
-
 	return (s);
 }
