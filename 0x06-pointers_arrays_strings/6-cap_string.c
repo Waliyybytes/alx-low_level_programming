@@ -14,6 +14,8 @@ char *cap_string(char *s)
 	int i;
 	int len = strlen(len);
 	int j;
+	char sep[] = {' ', '\t', '\n', ',', ';',
+		'.', '!', '?', '"', '(', ')', '{', '}'};
 
 	for (i = 0; i < len; i++)
 	{
