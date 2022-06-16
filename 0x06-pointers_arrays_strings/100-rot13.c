@@ -1,6 +1,7 @@
 #include "main.h"
 #include <string.h>
 #include <ctype.h>
+#include <stdio.h>
 /**
  * *rot13 - to encode some letters
  *
@@ -24,12 +25,12 @@ char *rot13(char *s)
 		{
 			if(s[i] == lower[j] && ((j >= 0 && j < 26) || (j >=52 && j < 78)))
 			{
-				temp = lower[(j+13)];
+				temp = lower[j + 13];
 			}
 			j++;
 		}
 		s[i] =  temp;
 		i++;
 	}
-	return s;
+	return (s);
 }
