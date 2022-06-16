@@ -21,3 +21,5 @@ char *rot13(char *);
 int _putchar(int);
 
 void print_number(int);
+
+int main(void);
