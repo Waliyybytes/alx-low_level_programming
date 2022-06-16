@@ -31,5 +31,5 @@ char *rot13(char *s)
 		s[i] =  temp;
 		i++;
 	}
-	return p;
+	return s;
 }
