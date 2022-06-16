@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "main.h"
+#include <ctype.h>
 /**
  * *string_toupper - function to change to uppercase
  *
