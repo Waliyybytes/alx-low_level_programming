@@ -12,7 +12,7 @@
 char *cap_string(char *s)
 {
 	int i;
-	int len = strlen(len);
+	int len = strlen(s);
 	int j;
 	char sep[] = {' ', '\t', '\n', ',', ';',
 		'.', '!', '?', '"', '(', ')', '{', '}'};
