@@ -12,8 +12,7 @@
 char *rot13(char *s)
 {
 	int i;
-	char *lower =  "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char *lower =  "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	int lon = strlen(lower);
 	char temp;
 	int j;
