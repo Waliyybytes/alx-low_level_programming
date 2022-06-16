@@ -27,8 +27,8 @@ char *cap_string(char *s)
 					s[i + 1] = (char)toupper(s[i + 1]);
 			}
 		}
-		if (s[i] == '\t')
-			s[i] = ' ';
+		if (isalpha(s[0]))
+			s[0] = (char)toupper(s[0]);
 	}
 	return (s);
 }
