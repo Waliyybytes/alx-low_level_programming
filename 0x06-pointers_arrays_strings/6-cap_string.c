@@ -13,12 +13,13 @@ char *cap_string(char *s)
 {
 	int i;
 	int len = strlen(len);
+	int j;
 
 	for (i = 0; i < len; i++)
 	{
 		if (!isalpha(s[i]))
 		{
-			for (int j = 0; j < 13; j++)
+			for (j = 0; j < 13; j++)
 			{
 				if (sep[j] == s[i])
 					s[i + 1] = (char)toupper(s[i + 1]);
