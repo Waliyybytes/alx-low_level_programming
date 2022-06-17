@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 #include <ctype.h>
 #include <limits.h>
@@ -22,15 +21,16 @@ void print_number(int n)
 			quot =  INT_MAX / 10;
 			rem = INT_MAX / 10;
 			if (n < 0)
+			{
+				rem = -rem;
 				_putchar('-');
+			}
 			cuns = 100000000;
 			n = quot;
 		}
 		else
 		{
-			int a = n;
-
-			if (a < 0)
+			if (n < 0)
 			{
 				n = -n;
 				_putchar('-');
@@ -45,7 +45,7 @@ void print_number(int n)
 			cuns /= 10;
 		}
 		if (rem != 0)
-			_putchar('0' + (n > 0 ? rem : rem + 1));
+			_putchar('0' + (rem > 0 ? rem : -rem + 1));
 	}
 	else
 		_putchar('0' + n % 10);
