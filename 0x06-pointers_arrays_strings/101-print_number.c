@@ -33,7 +33,7 @@ void print_number(int n)
 		}
 	}
 	else
-		_putchar(n);
+		_putchar('0' + n % 10);
 
 }
 
