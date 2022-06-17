@@ -22,7 +22,7 @@ void print_number(int n)
 			quot =  INT_MAX / 10;
 			rem = INT_MAX / 10;
 			if (n < 0)
-				putchar('-');
+				_putchar('-');
 			cuns = 100000000;
 			n = quot;
 		}
