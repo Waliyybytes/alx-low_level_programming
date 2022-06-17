@@ -7,7 +7,7 @@
  * Return: returns nothing
  */
 
-void reverse_array(char *a)
+void reverseArray(char *a)
 {
 	int i;
 	int len = n;

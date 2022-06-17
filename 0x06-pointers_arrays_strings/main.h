@@ -22,7 +22,7 @@ int _putchar(int);
 
 void print_number(int);
 
-void reverse_array(char *);
+void reverseArray(char *);
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
 
