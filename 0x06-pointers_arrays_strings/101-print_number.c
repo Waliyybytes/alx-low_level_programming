@@ -44,7 +44,8 @@ void print_number(int n)
 			n %= cuns;
 			cuns /= 10;
 		}
-		_putchar('0' + (n > 0 ? rem : rem + 1));
+		if (rem != 0)
+			_putchar('0' + (n > 0 ? rem : rem + 1));
 	}
 	else
 		_putchar('0' + n % 10);
