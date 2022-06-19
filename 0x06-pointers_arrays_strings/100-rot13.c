@@ -21,10 +21,9 @@ char *rot13(char *s)
 	i = 0;
 	while (s[i])
 	{
-		if (isalpha(s[i])
-		{
 			j = 0;
-			while (j < lon)
+			temp = s[i];
+			while (j < lon && isalpha(s[i]))
 			{
 				if (s[i] == lower[j] && ((j >= 0 && j < 26) || (j >= 52 && j < 78)))
 				{
