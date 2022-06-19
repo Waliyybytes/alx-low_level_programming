@@ -12,25 +12,31 @@
 char *rot13(char *s)
 {
 	int i;
-	char *lower =  "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char *lower =  "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		"ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	int lon = strlen(lower);
 	char temp;
 	int j;
 
 	i = 0;
-	while (isalpha(s[i]))
+	while (s[i])
 	{
-		j = 0;
-		while (j < lon)
+		if (isalpha(s[i])
 		{
-			if (s[i] == lower[j] && ((j >= 0 && j < 26) || (j >= 52 && j < 78)))
+			j = 0;
+			while (j < lon)
 			{
-				temp = lower[j + 13];
+				if (s[i] == lower[j] && ((j >= 0 && j < 26) || (j >= 52 && j < 78)))
+				{
+					temp = lower[j + 13];
+				}
+				j++;
 			}
-			j++;
+			s[i] =  temp;
+			i++;
 		}
-		s[i] =  temp;
-		i++;
+		else
+			i++;
 	}
 	return (s);
 }
