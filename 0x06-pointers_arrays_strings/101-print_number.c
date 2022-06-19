@@ -19,7 +19,7 @@ void print_number(int n)
 		if (n > 999999999 || n < -1000000000)
 		{
 			quot =  INT_MAX / 10;
-			rem = INT_MAX / 10;
+			rem = INT_MAX % 10;
 			if (n < 0)
 			{
 				rem = -rem;
