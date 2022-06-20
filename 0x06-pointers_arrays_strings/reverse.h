@@ -22,5 +22,5 @@ void reverseArray(char a[])
 		p[len - 1] = temp;
 		len--;
 	}
-
+	*a = *p;
 }
