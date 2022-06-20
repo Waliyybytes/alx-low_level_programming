@@ -1,1 +1,3 @@
-char *_memset(char *s, char b, unsigned int n);
+/*  function Prototypes for my code */
+
+char *_memset(char *, char, unsigned int);
