@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _memset - prints buffer in hexa
+ * *_memset - prints buffer in hexa
  *
  * @s: address of memory to print
  * @b: character to replace
@@ -13,6 +13,7 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	return (memset(s, b, n));
+	memset(s, b, n);
+	return s;
 }
 
