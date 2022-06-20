@@ -13,8 +13,8 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	char *p;
+	char *p = &s;
 	memset(s, b, n*sizeof(char));
-	return p;
+	return *p;
 }
 
