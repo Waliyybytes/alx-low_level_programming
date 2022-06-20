@@ -10,3 +10,5 @@ unsigned int _strspn(char *, char *);
 
 char *_strpbrk(char *, char *);
 
+char *_strstr(char *, char *);
+
