@@ -1,4 +1,4 @@
-#include "main.h"
+
 #include <string.h>
 /**
  * reverse_array - function to reverse elements of an array
@@ -8,17 +8,18 @@
  * Return: returns nothing
  */
 
-void reverseArray(char *a)
+void reverseArray(char a[])
 {
 	int i;
 	int len = strlen(a);
 	int temp;
+	char *p = a;
 
 	for (i = 0; i < len; i++)
 	{
-		temp = a[i];
-		a[i] = a[len - 1];
-		a[len - 1] = temp;
+		temp = p[i];
+		p[i] = p[len - 1];
+		p[len - 1] = temp;
 		len--;
 	}
 

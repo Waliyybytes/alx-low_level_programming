@@ -1,4 +1,5 @@
 #include "main.h"
+#include "reverse.h"
 #include  <string.h>
 /**
  * *infinite_add -to add inifinite numbers
@@ -14,9 +15,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int carry = 0;
 	int index = 0;
 	int next = 0;
-	char sum[];
+	char *sum;
 
-	reverseArray(n1)
+	reverseArray(n1);
 	reverseArray(n2);
 	while (1)
 	{
@@ -40,11 +41,32 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	if (carry)
 		sum[i] = carry + '0';
-	reverse_array(sum);
-	if (strlen(sum) > size_r)
+	reverseArray(sum);
+	if ( i > size_r)
 		return (0);
 	else
 		return (sum);
 
+
+}
+
+int main(void)
+{
+        char *n = "1234567892434574367823574575678477685785645685876876774586734734563456453743756756784458";
+        char *m = "9034790663470697234682914569346259634958693246597324659762347956349265983465962349569346";
+        char r[100];
+        char r2[10];
+        char r3[11];
+        char *res;
+
+        res = infinite_add(n, m, r, 100);
+        if (res == 0)
+        {
+                printf("Error\n");
+        }
+        else
+        {
+                printf("%s + %s = %s\n", n, m, res);
+        }
 
 }
