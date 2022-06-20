@@ -2,6 +2,8 @@
 
 char *_memset(char *, char, unsigned int);
 
-char *_memcpy(char *dest, char *src, unsigned int n);
+char *_memcpy(char *, char *, unsigned int n);
 
-char *_strchr(char *s, char c);
+char *_strchr(char *, char );
+
+unsigned int _strspn(char *, char *);

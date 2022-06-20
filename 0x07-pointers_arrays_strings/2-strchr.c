@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * *_strchr - prints buffer in hexa
+ * *_strchr - locates a chracter in a string
  *
  * @s: address of memory to print
  * @c: character to to find
