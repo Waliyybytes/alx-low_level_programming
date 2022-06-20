@@ -10,8 +10,7 @@
  * Return: pointer to the byte in s that matches accept
  */
 
-char *_strpbrk(char *s, char *accept);
-
+char *_strpbrk(char *s, char *accept)
 {
 	return (strpbrk(s, accept));
 }
