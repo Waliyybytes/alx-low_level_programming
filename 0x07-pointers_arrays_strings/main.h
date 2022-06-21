@@ -17,3 +17,5 @@ void print_chesssboard(char (*)[]);
 int _putchar(char);
 
 void print_diagsums(int *, int);
+
+void set_string(char **, char *);
