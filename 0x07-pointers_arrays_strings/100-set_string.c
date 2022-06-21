@@ -4,9 +4,9 @@
 /**
  * set_string - to set value of pointer to string
  *
- * @*s: pointer
+ * @s: pointer to a pointer
  * @to: character input
- * @Return: Nothing
+ * Return: Nothing
  */
 
 void set_string(char **s, char *to)
