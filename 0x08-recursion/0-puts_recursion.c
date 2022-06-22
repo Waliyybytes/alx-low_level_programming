@@ -5,7 +5,7 @@
  * _puts_recursion - prints a string
  *
  * @s: character to s
- * @Return: character
+ * Return: character
  */
 
 void _puts_recursion(char *s)
