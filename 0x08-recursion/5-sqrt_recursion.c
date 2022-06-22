@@ -10,13 +10,12 @@
 
 int _sqrt_recursion(int n)
 {
-	return (check_sqrt(1, n)
-
+	return (check_sqrt(1, n));
 }
 
-int check_sqrt(a , n)
+int check_sqrt(a, n)
 {
-	if (a * a == n)
+	if (a *a == n)
 		return (a);
 	else if (a > n / 2)
 		return (-1);
