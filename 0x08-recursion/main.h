@@ -5,3 +5,5 @@ int _putchar(char);
 int _strlen_recursion(char *);
 
 int factorial(int);
+
+int _pow_recursion(int , int);
