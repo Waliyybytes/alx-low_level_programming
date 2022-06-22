@@ -3,15 +3,21 @@
 
 /**
  * _sqrt_recursion -calls a function to compute square root
- * check_sqrt - computes square root of natural number n recursively
  * @n: number n
- * Return: power of number x to y
+ * Return: a call to another function
  */
 
 int _sqrt_recursion(int n)
 {
 	return (check_sqrt(1, n));
 }
+
+/**
+ * check_sqrt - computes square root of natural number n recursively
+ * @a: guessed number
+ * @n: number given
+ * Return: a number or -1 if no natural number as square root
+ */
 
 int check_sqrt(int a, int n)
 {
