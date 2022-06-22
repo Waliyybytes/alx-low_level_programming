@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * _sqrt_recursion -computes the factorial of a number
- *
+ * _sqrt_recursion -calls a function to compute square root
+ * check_sqrt - computes square root of natural number n recursively
  * @n: number n
  * Return: power of number x to y
  */
