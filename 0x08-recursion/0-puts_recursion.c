@@ -10,6 +10,6 @@
 
 void _puts_recursion(char *s)
 {
-	return (puts(s));
+	puts(s);
 }
 
