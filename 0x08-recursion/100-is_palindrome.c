@@ -10,9 +10,9 @@
 
 int is_palindrome(char *s)
 {
-	int n = strlen(s) - 1;
+	int n = strlen(s);
 
-	return (check_palindrome(s, n, 0));
+	return (check_palindrome(s, n - 1, 0));
 }
 
 /**
@@ -31,5 +31,5 @@ int check_palindrome(char *s, int n, int k)
 	else if (k == n / 2)
 		return (1);
 	else
-		return (check_palindrome(s, n, ++k));
+		return (check_palindrome(s, n, k + 1));
 }
