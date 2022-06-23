@@ -9,6 +9,8 @@
 
 int is_prime_number(int n)
 {
+	if (n == 0 || n == 1)
+		return (0);
 	return (check_prime(2, n));
 }
 
@@ -21,9 +23,9 @@ int is_prime_number(int n)
 
 int check_prime(int a, int n)
 {
-	if (n % a == 0)
+	if (n % a == 0 && a != n)
 		return (0);
-	else if (a == n)
+	else if (a > n / 2)
 		return (1);
 	else
 		return (check_prime(a + 1, n));
