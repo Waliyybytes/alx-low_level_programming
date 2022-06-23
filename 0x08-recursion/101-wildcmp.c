@@ -12,7 +12,7 @@
 int wildcmp(char *s1, char *s2)
 {
 
-	return (check_palindrome(s1, s2, 0));
+	return (compare_strings(s1, s2, 0));
 }
 
 /**
