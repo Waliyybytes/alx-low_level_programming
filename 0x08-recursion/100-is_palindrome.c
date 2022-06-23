@@ -25,10 +25,11 @@ int is_palindrome(char *s)
 
 int check_palindrome(char *s, int n, int k)
 {
-	if (s[n] != s[k])
+
+	if (s[n] != s[n - k])
 		return (0);
 	else if (k == n / 2)
 		return (1);
 	else
-		return (check_palindrome(s, n--, k++));
+		return (check_palindrome(s, n, ++k));
 }
