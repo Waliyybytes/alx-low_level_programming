@@ -31,7 +31,7 @@ int compare_strings(char *s1, char *s2, int i)
 	else if (s2[i] == '\0')
 		return (s1[i] == '\0');
 	else
-		return (compare_strings(s1, s2, i + 1);
+		return (compare_strings(s1, s2, i + 1));
 }
 
 
