@@ -30,5 +30,5 @@ int check_palindrome(char *s, int n, int k)
 	else if (k == n / 2)
 		return (1);
 	else
-		return (check_palindrome(n, n--, k++));
+		return (check_palindrome(s, n--, k++));
 }
