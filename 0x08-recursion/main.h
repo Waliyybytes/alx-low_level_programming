@@ -19,3 +19,5 @@ int check_prime(int, int);
 int is_palindrome(char *);
 
 int check_palindrome(char *, int, int);
+
+int compare_strings(char *, char *, int);
