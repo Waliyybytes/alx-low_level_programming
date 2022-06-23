@@ -19,6 +19,7 @@ int wildcmp(char *s1, char *s2)
  * compare_strings - computes square root of natural number n recursively
  * @s1: first string
  * @s2: second string
+ * @i: index
  * Return: a 1 or zero if comparable
  */
 
@@ -26,11 +27,11 @@ int compare_strings(char *s1, char *s2, int i)
 {
 
 	if (s1[i] == s2[i])
-		return ( s2[i] != '\0' && compare_strings(s1, s2, i+1));
+		return (s2[i] != '\0' && compare_strings(s1, s2, i + 1));
 	if (s2[i] == '\0')
 		return (s1[i] == '\0');
 	else
-		return (compare_strings(s1, s2, i +1));
+		return (compare_strings(s1, s2, i + 1));
 }
 
 
