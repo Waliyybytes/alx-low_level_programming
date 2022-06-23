@@ -28,10 +28,10 @@ int compare_strings(char *s1, char *s2, int i)
 
 	if (s1[i] == s2[i] || s2[i] == '*')
 		return (s1[i] != '\0' && s2[i] != '\0' && compare_strings(s1, s2, i + 1));
-	else if (s2[i] == '\0')
+	if (s2[i] == '\0')
 		return (s1[i] == '\0');
-	else
-		return ((s1[i] != '\0' || s2[i] != '\0') && compare_strings(s1, s2, i + 1));
+	if (s1[i] != s2[i] || s2[i] == '*')
+		return ((s1[i] != '\0' || s2[i] != '\0') &&  compare_strings(s1, s2, i + 1));
 }
 
 
