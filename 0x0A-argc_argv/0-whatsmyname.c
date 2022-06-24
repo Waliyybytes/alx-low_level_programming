@@ -5,7 +5,7 @@
 /**
  * main - program to prints its name
  * @argc: CLI argument count
- * @arg[]: CLI argument array
+ * @argv[]: CLI argument array
  * Return: 0 is success
  */
 
