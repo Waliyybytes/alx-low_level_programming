@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	int i = 1;
 	int sum = 0;
 	int num = 0;
-	size_t = 0;
+	size_t j = 0;
 
 	while (i < argc)
 	{
