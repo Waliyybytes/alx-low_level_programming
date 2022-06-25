@@ -11,8 +11,8 @@
 
 int main(int argc, char *argv[])
 {
-	unsigned long cents;
-	unsigned long b[] = {1, 2, 5, 10, 25};
+	long int  cents;
+	long int b[] = {1, 2, 5, 10, 25};
 	int rem = 0;
 	int quo = 0;
 	int i = 0;
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
 	if (argc == 2)
 	{
-		cents = atol(argv[1]);
+		cents = atoll(argv[1]);
 		if (cents > 0)
 		{
 			while (i % 5 < 5)
