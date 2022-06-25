@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int cents;
+	unsigned long long cents;
 	int b[] = {1, 2, 5, 10, 25};
 	int rem = 0;
 	int quo = 0;
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
 	if (argc == 2)
 	{
-		cents = atoi(argv[1]);
+		cents = atoll(argv[1]);
 		if (cents > 0)
 		{
 			while (i % 5 < 5)
