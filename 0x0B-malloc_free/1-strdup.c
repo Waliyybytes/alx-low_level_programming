@@ -8,7 +8,7 @@
  * Return: NULL or a pointer to the array
  */
 
-char *_strdup(char *str);
+char *_strdup(char *str)
 {
 	unsigned int i;
 	char *copy;
