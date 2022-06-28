@@ -14,20 +14,22 @@ char *str_concat(char *s1, char *s2)
 	char *join;
 	size_t i, j, k;
 
-	join = (char *)malloc(strlen(s1) + strlen(s2) + 1);
+	join = (char *)malloc(sizeof(s1) + sizeof(s2) + 1);
 	if (join == NULL)
 		return (NULL);
 
 	for (i = 0; i < strlen(s1); i++)
 		join[i] = s1[i];
-	j = i;
+	j = strlen(s1);
 
+	k = 0;
 	while (s2[k])
 	{
 		join[j] = s2[k];
 		k++;
 		j++;
 	}
+	join[j + 1] = '\0';
 	return (join);
 }
 
