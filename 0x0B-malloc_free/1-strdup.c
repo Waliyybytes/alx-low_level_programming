@@ -10,12 +10,11 @@
 
 char *_strdup(char *str)
 {
-	unsigned int i;
 	char *copy;
 
 	if (str != NULL)
 	{
-		copy = (char *)malloc(sizeof(strdup(str));
+		copy = (char *)malloc(sizeof(strdup(str)));
 		if (copy == NULL)
 			return (NULL);
 		copy = strdup(str);
