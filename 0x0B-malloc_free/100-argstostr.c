@@ -19,7 +19,7 @@ char *argstostr(int ac, char **av)
 
 	i = 0;
 	len = 0;
-	if (ac == 0 && *av == NULL)
+	if (ac == 0 || *av == NULL)
 		return (NULL);
 	while (av[i])
 	{
