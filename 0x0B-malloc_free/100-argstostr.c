@@ -24,14 +24,11 @@ char *argstostr(int ac, char **av)
 		len = len + strlen(av[i]);
 		i++;
 	}
-
-	ptr = (char *)malloc(sizeof(char) * (len + ac + 1));
-
 	if (ac == 0 || av == NULL)
 		return (NULL);
+	ptr = (char *)malloc(sizeof(char) * (len + ac + 1));
 	if (ptr == NULL)
 		return (NULL);
-
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; j < strlen(av[i]); j++)
@@ -41,8 +38,6 @@ char *argstostr(int ac, char **av)
 		}
 		ptr[count] = '\n';
 		count++;
-
 	}
-
 	return (ptr);
 }
