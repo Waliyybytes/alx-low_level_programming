@@ -16,6 +16,7 @@ char *argstostr(int ac, char **av)
 	char *ptr;
 	int len;
 	int count = 0;
+	char *fail = "Failed";
 
 	i = 0;
 	len = 0;
@@ -24,10 +25,10 @@ char *argstostr(int ac, char **av)
 		len = len + strlen(av[i]);
 		i++;
 	}
-	if (ac == 0 || av == NULL)
-		return (NULL);
+	if (ac == 0 && av == NULL)
+		return fail;
 	ptr = (char *)malloc(sizeof(char) * (len + ac + 1));
-	if (ptr == NULL)
+	if (ac == 0 || av == NULL || ptr == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
