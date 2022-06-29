@@ -42,9 +42,9 @@ char **strtow(char *str)
 	int i = 0, j = 0, len = 0;
 	char **ptr;
 	int c_idx = 0;
-	
+
 	if (str == NULL || *str == ' ')
-	       return NULL;	
+		return (NULL);
 	while (str[i])
 	{
 		if (str[i + 1] == ' ')
