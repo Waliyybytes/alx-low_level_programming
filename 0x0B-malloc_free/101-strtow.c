@@ -9,7 +9,7 @@
  * Return: pointer or NULL
  */
 
-char **strtow(char *str);
+char **strtow(char *str)
 {
 	int i, j, k, len;
 	char **ptr;
