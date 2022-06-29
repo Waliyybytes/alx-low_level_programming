@@ -20,9 +20,8 @@ int **alloc_grid(int width, int height)
 
 	for (i = 0; i < height; i++)
 		mesh[i] = (int *)malloc(width * sizeof(int));
-	if (mesh == NULL || mesh[i] == NULL)
+	if (mesh == NULL)
 	{	free(mesh);
-		free(mesh[i]);
 		return (NULL);
 	}
 	i = 0;
