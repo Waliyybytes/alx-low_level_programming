@@ -17,14 +17,15 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return (NULL);
 	mesh = (int **)malloc(height * sizeof(int *));
-
+	if (mesh == NULL)
+		return (NULL);
 	for (i = 0; i < height; i++)
 		mesh[i] = (int *)malloc(width * sizeof(int));
-	if (mesh == NULL && mesh[i] == NULL)
+	if (mesh[i] == NULL)
 	{
-		free(mesh);
 		for (i = 0; i < height; i++)
 			free(mesh[i]);
+		free(mesh);
 		return (NULL);
 	}
 	i = 0;
