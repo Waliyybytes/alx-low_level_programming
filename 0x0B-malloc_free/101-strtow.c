@@ -26,7 +26,7 @@ char **fix_string(char *str)
 					break;
 			}
 		}
-		i++
+		i++;
 	}
 	return (ptr);
 }
@@ -38,7 +38,7 @@ char **fix_string(char *str)
 
 char **strtow(char *str)
 {
-	int i = 0, j = 0, k = 0, len = 0;
+	int i = 0, j = 0, len = 0;
 	char **ptr;
 	int l_idx = 0, c_idx = 0;
 
