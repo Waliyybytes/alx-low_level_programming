@@ -34,7 +34,6 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0; ptr[i]; j++)
 		{
-			str[count] = ptr[i][j];
 			count++;
 		}
 	}
