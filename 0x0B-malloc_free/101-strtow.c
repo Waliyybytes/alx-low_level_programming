@@ -11,7 +11,7 @@
  */
 char **fix_string(char *str)
 {
-	char **ptr;
+	char **ptr = NULL;
 	int i = 0, j = 0, k = 0;
 
 	while (str[k])
