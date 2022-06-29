@@ -13,12 +13,12 @@ char *argstostr(int ac, char **av)
 {
 	int i;
 	size_t j;
-	char **ptr;
+	char *ptr;
 	char *str;
 	int count = 0;
 
 	i = 0;
-	ptr = (char **)malloc(sizeof(char *) * ac);
+	ptr = (char *)malloc(sizeof(char *) * ac);
 	while (i < ac)
 	{
 		ptr[i] = (char *)malloc(sizeof(char) * (strlen(av[i]) + ac - 1));
@@ -38,5 +38,5 @@ char *argstostr(int ac, char **av)
 			count++;
 		}
 	}
-	return (str);
+	return (ptr);
 }
