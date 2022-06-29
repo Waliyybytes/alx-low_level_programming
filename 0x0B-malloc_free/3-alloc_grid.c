@@ -16,7 +16,7 @@ int **alloc_grid(int width, int height)
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	mesh = (int *)malloc(sizeof(height * width));
+	int *mesh = (int *)malloc(sizeof(height * width));
 	if (mesh == NULL)
 		return (NULL);
 	while (mesh)
