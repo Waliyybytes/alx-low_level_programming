@@ -25,7 +25,12 @@ char *argstostr(int ac, char **av)
 		i++;
 	}
 
-	ptr = (char *)malloc(sizeof(char) * (len + ac - 1));
+	ptr = (char *)malloc(sizeof(char) * (len + ac + 1));
+
+	if ( ac == 0 || av == NULL)
+		return NULL;
+	if ( ptr == NULL)
+		return NULL;
 
 	for (i = 0; i < ac; i++)
 	{
