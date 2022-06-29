@@ -14,7 +14,9 @@ int **alloc_grid(int width, int height)
 	int *mesh, **grid;
 	int i, w, h;
 
-	mesh = (int *)malloc(sizeof(width * height);
+	if (width <= 0 || height <= 0)
+		return (NULL);
+	mesh = (int *)malloc(sizeof(width * height));
 	if (mesh == NULL)
 		return (NULL);
 	i = 0;
