@@ -40,7 +40,7 @@ char **strtow(char *str)
 {
 	int i = 0, j = 0, len = 0;
 	char **ptr;
-	int l_idx = 0, c_idx = 0;
+	int c_idx = 0;
 
 	while (str[i])
 	{
@@ -48,16 +48,17 @@ char **strtow(char *str)
 			len++;
 		i++;
 	}
-	ptr = (char **)malloc(sizeof(char *) * (len + 2));
+	ptr = (char **)malloc(sizeof(char *) * (len + 1));
 	if (ptr == NULL)
 		return (NULL);
 	while (str[i])
 	{
+		if (isalnum(str))
+			c_idx++;
 		if (str[i + 1] == ' ')
 		{
-			c_idx = i + 1;
-			ptr[j] = (char *)malloc(sizeof(char) * (c_idx - l_idx + 1));
-			l_idx = c_idx + 1;
+			ptr[j] = (char *)malloc(sizeof(char) * cidx);
+			c_idx = 0;
 			j++;
 		}
 		i++;
