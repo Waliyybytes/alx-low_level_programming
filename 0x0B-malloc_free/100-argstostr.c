@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 	i = 0;
 	len = 0;
 	if (ac == 0 && av[0] == NULL)
-		return NULL;
+		return (NULL);
 	while (av[i])
 	{
 		len = len + strlen(av[i]);
