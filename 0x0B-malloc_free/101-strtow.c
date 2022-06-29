@@ -15,12 +15,12 @@ char **strtow(char *str)
 	char **ptr;
 	int l_idx = 0, c_idx = 0;
 
-	if (str == "" || str == NULL)
+	if (*str == "" || *str == NULL)
 		return (NULL);
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == " ")
+		if (*(str + i) == " ")
 			len++;
 		i++;
 	}
@@ -31,7 +31,7 @@ char **strtow(char *str)
 	j = 0;
 	while (str[i])
 	{
-		if (str[i] == " ")
+		if (*(str + i) == " ")
 		{
 			c_idx = i;
 			ptr[j] = (char *)malloc(sizeof(char) * (c_idx - l_idx + 1));
@@ -47,7 +47,7 @@ char **strtow(char *str)
 		{
 			for (j = 0; ptr[i]; j++)
 			{
-				if (str[k] != " ")
+				if (*(str + k) != " ")
 					ptr[i][j] = str[k];
 				else
 					ptr[i][j] = '\0';
