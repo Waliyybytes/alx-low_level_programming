@@ -37,5 +37,5 @@ char *argstostr(int ac, char **av)
 		}
 	}
 
-	return (ptr);
+	return (**ptr);
 }
