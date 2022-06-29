@@ -14,14 +14,14 @@ char *argstostr(int ac, char **av)
 	int i;
 	size_t j;
 	char **ptr;
-	char *str = "";
+	char *str = NULL;
 	int count = 0;
 
 	i = 0;
 	ptr = (char **)malloc(sizeof(char *) * ac);
 	while (i < ac)
 	{
-		ptr[i] = (char *)malloc(sizeof(char) * (strlen(av[i]) + ac -1));
+		ptr[i] = (char *)malloc(sizeof(char) * (strlen(av[i]) + ac - 1));
 		i++;
 	}
 	for (i = 0; i < ac; i++)
