@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 #include <string.h>
+#include <ctype.h>
 /**
  * strtow - split a strings to words
  * @str: array of args
@@ -19,7 +20,7 @@ char **strtow(char *str)
 	len = 0;
 	while (str[i])
 	{
-		if (*(str + i) == ' ')
+		if (str[i] == ' ' && isalnum(str[i + 1]))
 			len++;
 		i++;
 	}
