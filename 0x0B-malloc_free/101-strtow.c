@@ -57,7 +57,7 @@ char **strtow(char *str)
 			c_idx++;
 		if (str[i + 1] == ' ')
 		{
-			ptr[j] = (char *)malloc(sizeof(char) * cidx);
+			ptr[j] = (char *)malloc(sizeof(char) * c_idx);
 			c_idx = 0;
 			j++;
 		}
