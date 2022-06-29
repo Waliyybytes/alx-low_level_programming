@@ -18,18 +18,17 @@ char *argstostr(int ac, char **av)
 
 	ptr = (char **)malloc(sizeof(char *) * ac);
 	i = 0;
-	while(i < ac)
-	{	
+	while (i < ac)
+	{
 		ptr[i] = (char *)malloc(sizeof(char) * (strlen(av[i])));
 		i++;
 	}
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; j < strlen(ptr[i]); j++)
-		{
+		for (j = 0; j < strlen(av[i]); j++)
 			ptr[i][j] = av[i][j];
-			ptr[i][strlen(av[i])] = '\n';
-		}
+		ptr[i][strlen(av[i])] = '\n';
+
 	}
 	for (i = 0; ptr; i++)
 	{
