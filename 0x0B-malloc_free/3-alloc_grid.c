@@ -28,7 +28,11 @@ int **alloc_grid(int width, int height)
 	while (i < height)
 	{
 		if (mesh[i] == NULL)
-			free(mesh[i]);
+		{
+			for (i = 0; i < height; i++)
+				free(mesh[i]);
+			free(mesh);
+		}
 		i++;
 	}
 	i = 0;
