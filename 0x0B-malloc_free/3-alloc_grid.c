@@ -16,16 +16,18 @@ int **alloc_grid(int width, int height)
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	grid = (int **)malloc(sizeof(width));
-	*grid = (int *)malloc(sizeof(height));
-	if (*grid == NULL || grid == NULL)
+	mesh = (int *)malloc(sizeof(height * width));
+	if (mesh == NULL)
 		return (NULL);
-	for (h = 0; h < height; h++)
+	while (mesh)
 	{
-		for (w = 0; w < width; w++)
-			grid[h][w] = 0;
+		for (h = 0; grid[height]; h++)
+		{
+			for (w = 0; grid[h][width]; w++)
+				grid[h][w] = 0;
+		}
 	}
-	return (grid);
+		return (grid);
 }
 
 
