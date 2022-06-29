@@ -22,7 +22,7 @@ int **alloc_grid(int width, int height)
 	i = 0;
 	while (mesh[height])
 	{
-		mesh[i] = (int *)malloc(width * sizeof(int))
+		mesh[i] = (int *)malloc(width * sizeof(int));
 		j = 0;
 		while (mesh[i][width])
 		{
