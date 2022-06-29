@@ -14,20 +14,22 @@ char *argstostr(int ac, char **av)
 	int i;
 	size_t j;
 	char *ptr;
-	int len = 0;
+	int len;
 	int count = 0;
 
 	i = 0;
+	len = 0;
 	while (av[i])
 	{
 		len = len + strlen(av[i]);
+		i++;
 	}
 
 	ptr = (char *)malloc(sizeof(char) * (len + ac - 1));
 
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i]; j++)
+		for (j = 0; j < strlen(av[i]); j++)
 		{	
 			ptr[count] = av[i][j];
 			count++;
