@@ -14,7 +14,7 @@ char *argstostr(int ac, char **av)
 	int i;
 	size_t j;
 	char **ptr;
-	char *str;
+	char *str = NULL;
 	int count = 0;
 
 	i = 0;
@@ -32,7 +32,7 @@ char *argstostr(int ac, char **av)
 	}
 	for (i = 0; ptr; i++)
 	{
-		for (j = 0; j < ptr[i]; j++)
+		for (j = 0; ptr[i]; j++)
 		{
 			str[count] = ptr[i][j];
 			count++;
