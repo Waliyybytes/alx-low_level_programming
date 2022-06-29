@@ -27,15 +27,15 @@ char *argstostr(int ac, char **av)
 
 	ptr = (char *)malloc(sizeof(char) * (len + ac + 1));
 
-	if ( ac == 0 || av == NULL)
-		return NULL;
-	if ( ptr == NULL)
-		return NULL;
+	if (ac == 0 || av == NULL)
+		return (NULL);
+	if (ptr == NULL)
+		return (NULL);
 
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; j < strlen(av[i]); j++)
-		{	
+		{
 			ptr[count] = av[i][j];
 			count++;
 		}
