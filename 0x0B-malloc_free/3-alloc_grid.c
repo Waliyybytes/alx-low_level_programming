@@ -11,28 +11,26 @@
 
 int **alloc_grid(int width, int height)
 {
-	int **grid = NULL;
-	int w, h, i;
-	int *mesh;
+	int i, j;
+	int **mesh;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	mesh = (int *)malloc(sizeof(height * width));
+	mesh = (int **)malloc(sizeof(height * width));
 	if (mesh == NULL)
 		return (NULL);
-	for (i = 0; i < height * width; i++)
-		mesh[i] = 0;
 	i = 0;
-	while (mesh[i])
+	while (mesh[height])
 	{
-		for (h = 0; grid[height]; h++)
+		j = 0;
+		while (mesh[i][width])
 		{
-			for (w = 0; grid[h][width]; w++)
-				grid[h][w] = mesh[i];
+			mesh[i][j] = 0;
+			j++;
 		}
 		i++;
 	}
-		return (grid);
+		return (mesh);
 }
 
 
