@@ -43,7 +43,7 @@ char **strtow(char *str)
 	char **ptr;
 	int c_idx = 0;
 	
-	if (*str == NULL || *str == '')
+	if (str == NULL || str == '')
 	       return NULL;	
 	while (str[i])
 	{
