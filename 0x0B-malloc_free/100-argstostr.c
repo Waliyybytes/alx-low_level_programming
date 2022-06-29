@@ -16,11 +16,11 @@ char *argstostr(int ac, char **av)
 	char *ptr;
 	int len;
 	int count = 0;
-	char *fail = "Failed";
+	char *fail = "Failed\n";
 
 	i = 0;
 	len = 0;
-	if (ac == 0 && *av == NULL)
+	if (ac == 0 && av[0] == NULL)
 		return (fail);
 	while (av[i])
 	{
