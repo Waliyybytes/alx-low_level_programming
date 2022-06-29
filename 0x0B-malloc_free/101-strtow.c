@@ -16,6 +16,7 @@ char **strtow(char *str)
 	int l_idx = 0, c_idx = 0;
 
 	i = 0;
+	len = 0;
 	while (str[i])
 	{
 		if (*(str + i) == ' ')
