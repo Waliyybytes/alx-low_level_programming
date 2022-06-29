@@ -11,7 +11,7 @@
 
 char *argstostr(int ac, char **av)
 {
-	int i, j;
+	size_t i, j;
 	char **ptr;
 
 	i = 0;
@@ -29,5 +29,5 @@ char *argstostr(int ac, char **av)
 		ptr[i][strlen(av[i])] = '\n';
 	}
 
-	return (ptr);
+	return (*ptr);
 }
