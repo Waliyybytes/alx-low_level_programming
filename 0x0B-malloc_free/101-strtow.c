@@ -15,8 +15,6 @@ char **strtow(char *str)
 	char **ptr;
 	int l_idx = 0, c_idx = 0;
 
-	if (*str == '' || str == NULL)
-		return (NULL);
 	i = 0;
 	while (str[i])
 	{
