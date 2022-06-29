@@ -6,54 +6,62 @@
 /**
  * strtow - split a strings to words
  * @str: array of args
- *
  * Return: pointer or NULL
  */
-
 char **strtow(char *str)
 {
-	int i, j, k, len;
+	int i = 0, j = 0, k = 0, len = 0;
 	char **ptr;
 	int l_idx = 0, c_idx = 0;
 
-	i = 0;
-	len = 0;
 	while (str[i])
 	{
-		if (str[i + 1] == ' ' && isalnum(str[i]))
+		if (str[i + 1] == ' ')
 			len++;
 		i++;
 	}
 	ptr = (char **)malloc(sizeof(char *) * (len + 2));
 	if (ptr == NULL)
 		return (NULL);
-	i = 0;
-	j = 0;
 	while (str[i])
 	{
-		if (str[i + 1] == ' ' && isalnum(str[i]))
+		if (str[i + 1] == ' ')
 		{
-			c_idx = i;
+			c_idx = i + 1;
 			ptr[j] = (char *)malloc(sizeof(char) * (c_idx - l_idx + 1));
 			l_idx = c_idx + 1;
 			j++;
 		}
 		i++;
 	}
-	k = 0;
+	ptr = fix_string(str)
+	return (ptr);
+}
+
+/**
+ * fix_string - to fix charcaters
+ * @str: given string
+ * Return: ptr
+ */
+char **fix_string(char *str)
+{
+	char **ptr;
+	int i = 0, j = 0, k = 0;
+
 	while (str[k])
 	{
 		for (i = 0; ptr; i++)
 		{
 			for (j = 0; ptr[i]; j++)
 			{
-				if (*(str + k) != ' ')
+				if (str[k] != ' ')
 					ptr[i][j] = str[k];
 				else
-					ptr[i][j] = '\0';
-				k++;
+					break;
 			}
 		}
+		i++
 	}
 	return (ptr);
 }
+
