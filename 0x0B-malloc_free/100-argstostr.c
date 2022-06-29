@@ -14,7 +14,7 @@ char *argstostr(int ac, char **av)
 	int i;
 	size_t j;
 	char **ptr;
-	char *str = NULL;
+	char *str;
 	int count = 0;
 
 	i = 0;
@@ -38,5 +38,6 @@ char *argstostr(int ac, char **av)
 			count++;
 		}
 	}
+
 	return (str);
 }
