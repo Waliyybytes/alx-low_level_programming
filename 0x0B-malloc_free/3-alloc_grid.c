@@ -12,7 +12,7 @@
 int **alloc_grid(int width, int height)
 {
 	int *mesh;
-	int **grid;
+	int **grid = 0;
 	int i, w, h;
 
 	if (width <= 0 || height <= 0)
