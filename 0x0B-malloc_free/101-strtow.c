@@ -20,7 +20,7 @@ char **strtow(char *str)
 	len = 0;
 	while (str[i])
 	{
-		if (str[i] == ' ' && isalnum(str[i + 1]))
+		if (str[i + 1] == ' ' && isalnum(str[i]))
 			len++;
 		i++;
 	}
@@ -31,7 +31,7 @@ char **strtow(char *str)
 	j = 0;
 	while (str[i])
 	{
-		if (*(str + i) == ' ')
+		if (str[i + 1] == ' ' && isalnum(str(i)))
 		{
 			c_idx = i;
 			ptr[j] = (char *)malloc(sizeof(char) * (c_idx - l_idx + 1));
