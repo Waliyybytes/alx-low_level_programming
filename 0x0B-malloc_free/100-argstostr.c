@@ -16,7 +16,6 @@ char *argstostr(int ac, char **av)
 	char *ptr;
 	int len;
 	int count = 0;
-	char *fail = "Failed\n";
 
 	i = 0;
 	len = 0;
