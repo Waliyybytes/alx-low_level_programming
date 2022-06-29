@@ -7,28 +7,29 @@
 /**
  * fix_string - to fix charcaters
  * @str: given string
+ * @ptrs: beded
  * Return: ptr
  */
-char **fix_string(char *str)
+char **fix_string(char *str, char **ptr)
 {
-	char **ptr = NULL;
+	char **ptrs = malloc(sizeof(ptr));
 	int i = 0, j = 0, k = 0;
 
 	while (str[k])
 	{
-		for (i = 0; ptr; i++)
+		for (i = 0; ptrs; i++)
 		{
-			for (j = 0; ptr[i]; j++)
+			for (j = 0; ptrs[i]; j++)
 			{
 				if (str[k] != ' ')
-					ptr[i][j] = str[k];
+					ptrs[i][j] = str[k];
 				else
 					break;
 			}
 		}
 		i++;
 	}
-	return (ptr);
+	return (ptrs);
 }
 /**
  * strtow - split a strings to words
@@ -63,6 +64,6 @@ char **strtow(char *str)
 		}
 		i++;
 	}
-	ptr = fix_string(str);
+	ptr = fix_string(str, ptr);
 	return (ptr);
 }
