@@ -3,7 +3,7 @@
 #include "main.h"
 #include <string.h>
 /**
- * argstostr - concatenate argv 
+ * argstostr - concatenate argv
  * @av: array of args
  * @ac: arg size
  * Return: pointer or NULL
@@ -11,7 +11,8 @@
 
 char *argstostr(int ac, char **av)
 {
-	size_t i, j;
+	int i;
+	size_t j;
 	char **ptr;
 
 	i = 0;
