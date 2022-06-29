@@ -27,6 +27,7 @@ int **alloc_grid(int width, int height)
 		if (mesh[i] == NULL)
 		{
 			free(mesh[i]);
+			free(mesh);
 			return (NULL);
 		}
 		i++;
