@@ -17,15 +17,15 @@ char *argstostr(int ac, char **av)
 	char *str = NULL;
 	int count = 0;
 
-	ptr = (char **)malloc(sizeof(char *) * ac);
+	ptr = (char **)malloc(sizeof(char) * ac);
 
 	i = 0;
 	while (i < ac)
-		ptr[i] = (char *)malloc(sizeof(char) * (strlen(av[i])));
+		ptr[i] = (char *)malloc(sizeof(char *) * (strlen(av[i])));
 
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; j < strlen(av[i]); j++)
+		for (j = 0; av[i]; j++)
 			ptr[i][j] = av[i][j];
 		ptr[i][strlen(av[i])] = '\n';
 
