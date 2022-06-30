@@ -12,7 +12,9 @@ char **strtow(char *str)
 	int i = 0, k = 0, l = 0, c_idx = 0, len = 0, j = 0;
 	char **ptr;
 	size_t real_length = 0;
-
+	
+	if (str == ' ')
+		return NULL;
 	while (str[i])
 	{
 		if (str[i] == ' ' && (isgraph(str[i + 1]) || isgraph(str[i - 1])))
