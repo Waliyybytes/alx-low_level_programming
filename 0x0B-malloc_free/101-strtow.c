@@ -33,7 +33,7 @@ char **strtow(char *str)
 				c_idx++;
 			if (str[i] == ' ' || str[i] == '\0')
 			{
-				ptr[k] = (char *)malloc(sizeof(char) * c_idx);
+				ptr[k] = (char *)malloc(sizeof(char) * c_idx + 1);
 				j = 0;
 				for (l = i - c_idx; l < i; l++)
 				{
