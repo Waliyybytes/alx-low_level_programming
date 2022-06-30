@@ -18,7 +18,7 @@ char **strtow(char *str)
 
 	while (str[i])
 	{
-		if (str[i + 1] == ' ' && isgraph(str[i - 1]) || isgraph(str[i + 1]))
+		if (str[i + 1] == ' ' && (isgraph(str[i - 1]) || isgraph(str[i + 1])))
 			len++;
 		i++;
 	}
