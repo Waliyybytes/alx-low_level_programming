@@ -13,7 +13,7 @@ char **strtow(char *str)
 	char **ptr;
 	size_t real_length = 0;
 
-	if ((*str == ' ' || *str == 0) && (strlen(s) == 0 || strlen(s) == 1)) 
+	if ((*str == ' ' || *str == 0) && (strlen(s) == 0 || strlen(s) == 1))
 		return (NULL);
 	while (str[i])
 	{
