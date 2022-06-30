@@ -19,6 +19,8 @@ char **strtow(char *str)
 	{
 		if (str[i] == ' ' && (isgraph(str[i - 1])))
 			len++;
+		if (str[i] == ' ' && str[i + 1] == '\0')
+			break;
 		i++;
 	}
 	ptr = (char **)malloc((len + 2) * sizeof(char *));
