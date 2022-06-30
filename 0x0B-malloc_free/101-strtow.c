@@ -5,33 +5,6 @@
 #include <ctype.h>
 
 /**
- * fix_string - to fix charcaters
- * @str: given string
- * @ptr: beded
- * Return: ptr
- */
-char **fix_string(char *str, char **ptr)
-{
-	char **ptrs = malloc(sizeof(ptr));
-	int i = 0, j = 0, k = 0;
-
-	while (str[k])
-	{
-		for (i = 0; ptrs; i++)
-		{
-			for (j = 0; ptrs[i]; j++)
-			{
-				if (str[k] != ' ')
-					ptrs[i][j] = str[k];
-				else
-					break;
-			}
-		}
-		i++;
-	}
-	return (ptrs);
-}
-/**
  * strtow - split a strings to words
  * @str: array of args
  * Return: pointer or NULL
@@ -39,33 +12,36 @@ char **fix_string(char *str, char **ptr)
 
 char **strtow(char *str)
 {
-	int i = 0, j = 0, len = 0;
+	int i = 0, len = 0, k = 0, l = 0;
 	char **ptr;
 	int c_idx = 0;
 
-	if (str == NULL || *str == ' ')
-		return (NULL);
 	while (str[i])
 	{
 		if (str[i + 1] == ' ')
 			len++;
 		i++;
 	}
-	ptr = (char **)malloc(sizeof(char) * (len + 1));
+	ptr = (char **)malloc(sizeof(char *) * (len + 2));
 	if (ptr == NULL)
 		return (NULL);
-	while (str[i])
+	for (k = 0; k < len + 1; k++)
 	{
-		if (isalnum(str))
-			c_idx++;
-		if (str[i + 1] == ' ')
+		while (str[i])
 		{
-			ptr[j] = (char *)malloc(sizeof(char *) * c_idx);
-			c_idx = 0;
-			j++;
+			if (isalnum(str[i]))
+				c_idx++;
+			if (str[i] == ' ')
+			{
+				ptr[k] = (char *)malloc(sizeof(char) * c_idx);
+				for (l = i - c_idx; l < i; l++)
+					ptr[k][l] = str[l];
+				c_idx = 0;
+				break;
+			}
+			i++;
 		}
-		i++;
 	}
-	ptr = fix_string(str, ptr);
+	ptr[len + 2] = NULL;
 	return (ptr);
 }
