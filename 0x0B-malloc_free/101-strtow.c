@@ -17,7 +17,7 @@ char **strtow(char *str)
 		return (NULL);
 	while (str[i])
 	{
-		if (str[i] == ' ' && (isgraph(str[i + 1]) || isgraph(str[i - 1])))
+		if (str[i] == ' ' && (isgraph(str[i + 1]))
 			len++;
 		i++;
 	}
@@ -31,7 +31,7 @@ char **strtow(char *str)
 		{
 			if (isgraph(str[i]))
 				c_idx++;
-			if (str[i] == ' ' || str[i] == '\0')
+			if ((str[i] == ' ' || str[i] == '\0') && isgraph(str[i + 1]))
 			{
 				ptr[k] = (char *)malloc(sizeof(char) * c_idx + 1);
 				j = 0;
