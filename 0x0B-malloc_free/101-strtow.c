@@ -10,7 +10,8 @@
 char **strtow(char *str)
 {
 	int i = 0, k = 0, l = 0, c_idx = 0, len = 0, j = 0;
-	char **ptr, size_t real_length = 0;
+	char **ptr;
+	size_t real_length = 0;
 
 	if (*str == ' ' || str == NULL)
 		return (NULL);
@@ -36,12 +37,10 @@ char **strtow(char *str)
 				j = 0;
 				for (l = i - c_idx; l < i; l++)
 				{
-					ptr[k][j] = str[l];
-					j++;
+					ptr[k][j] = str[l], j++;
 				}
 				ptr[k][c_idx] = '\0';
-				c_idx = 0;
-				i++;
+				c_idx = 0, i++;
 				break;
 			}
 			i++, real_length++;
