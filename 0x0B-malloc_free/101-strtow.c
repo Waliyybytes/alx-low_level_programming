@@ -13,11 +13,11 @@ char **strtow(char *str)
 	char **ptr;
 	size_t real_length = 0;
 
-	if ((*str == ' ' || *str == 0) && (strlen(str) == 0 || strlen(str) == 1))
+	if ((*str == ' ' || *str == 0) && (strlen(str) < 1))
 		return (NULL);
 	while (str[i])
 	{
-		if (str[i] == ' ' && (isgraph(str[i + 1])))
+		if (str[i] == ' ' && (isgraph(str[i - 1])))
 			len++;
 		i++;
 	}
@@ -31,7 +31,7 @@ char **strtow(char *str)
 		{
 			if (isgraph(str[i]))
 				c_idx++;
-			if ((str[i] == ' ' || str[i] == '\0') && isgraph(str[i + 1]))
+			if ((str[i] == ' ' || str[i] == '\0') && isgraph(str[i - 1]))
 			{
 				ptr[k] = (char *)malloc(sizeof(char) * c_idx + 1);
 				j = 0;
