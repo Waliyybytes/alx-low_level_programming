@@ -1,37 +1,35 @@
+
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 #include <string.h>
-#include <ctype.h>
-
 /**
  * strtow - split a strings to words
  * @str: array of args
  * Return: pointer or NULL
  */
-
 char **strtow(char *str)
 {
-	int i = 0, len = 0, k = 0, j = 0, l = 0, c_idx = 0;
+	int i = 0, k = 0, l = 0, c_idx = 0, len = 0, j = 0;
 	char **ptr;
-	size_t size = 0;
+	size_t real_length = 0;
 
 	while (str[i])
 	{
-		if (str[i + 1] == ' ' && (isgraph(str[i - 1]) || isgraph(str[i + 1])))
+		if (str[i] == ' ' && (isgraph(str[i + 1]) || isgraph(str[i - 1])))
 			len++;
 		i++;
 	}
-	ptr = (char **)malloc(sizeof(char *) * (len + 2));
+	ptr = (char **)malloc((len + 2) * sizeof(char *));
 	if (ptr == NULL)
 		return (NULL);
-	for (k = 0; k < len + 1; k++)
+	i = 0;
+	for (k = 0; k < len + 1 ; k++)
 	{
-		while (size < strlen(str))
+		while (real_length < strlen(str))
 		{
 			if (isgraph(str[i]))
 				c_idx++;
-			if (str[i] == ' ')
+			if (str[i] == ' ' || str[i] == '\0')
 			{
 				ptr[k] = (char *)malloc(sizeof(char) * c_idx);
 				j = 0;
@@ -45,9 +43,11 @@ char **strtow(char *str)
 				i++;
 				break;
 			}
-			i++, size++;
+			i++;
+			real_length++;
 		}
 	}
 	ptr[len + 2] = NULL;
 	return (ptr);
 }
+
