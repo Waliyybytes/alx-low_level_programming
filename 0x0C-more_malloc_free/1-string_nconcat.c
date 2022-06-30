@@ -13,8 +13,8 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	int a = strlen(s1);
-	int i = 0, j = 0;
+	unsigned int a = strlen(s1);
+	unsigned int i = 0, j = 0;
 
 	if (n >= strlen(s2))
 	{
