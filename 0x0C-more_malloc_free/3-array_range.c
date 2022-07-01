@@ -17,7 +17,7 @@ int *array_range(int min, int max)
 
 	if (min > max)
 		return (NULL);
-	ptr = calloc(a - 1, sizeof(int));
+	ptr = calloc(a, sizeof(int));
 	if (ptr == NULL)
 		return (NULL);
 	for (i = 0; i < a - 1; i++)
