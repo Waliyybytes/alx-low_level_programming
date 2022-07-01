@@ -12,18 +12,19 @@
 int *array_range(int min, int max)
 {
 	int *ptr;
-	int i = 0, j = 0;
+	int i = 0;
+	int a = max - min + 2;
 
 	if (min > max)
 		return (NULL);
-	ptr = calloc(max - min + 2, sizeof(int));
+	ptr = calloc(a, sizeof(int));
 	if (ptr == NULL)
 		return (NULL);
-	for (i = min; i < max + 1; i++)
+	for (i = 0; i < a - 1; i++)
 	{
-		ptr[j] = i;
-		j++;
+		ptr[i] = min;
+		min++;
 	}
-	ptr[max - min + 2] = '\0';
+	ptr[a - 1] = '\0';
 	return (ptr);
 }
