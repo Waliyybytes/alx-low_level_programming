@@ -20,11 +20,11 @@ int *array_range(int min, int max)
 	ptr = calloc(a, sizeof(int));
 	if (ptr == NULL)
 		return (NULL);
-	for (i = 0; i < a - 1; i++)
+	for (i = 0; i < a; i++)
 	{
 		ptr[i] = min;
 		min++;
 	}
-	ptr[a - 1] = '\0';
+	ptr[a] = '\0';
 	return (ptr);
 }
