@@ -25,6 +25,5 @@ int *array_range(int min, int max)
 		ptr[i] = min;
 		min++;
 	}
-	ptr[a - 1] = '\0';
 	return (ptr);
 }
