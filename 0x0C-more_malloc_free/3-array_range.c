@@ -13,14 +13,14 @@ int *array_range(int min, int max)
 {
 	int *ptr;
 	int i = 0;
-	int a = max - min + 2;
+	int a = max - min + 1;
 
 	if (min > max)
 		return (NULL);
 	ptr = (int *) calloc(a, sizeof(int));
 	if (ptr == NULL)
 		return (NULL);
-	for (i = 0; i < a - 1; i++)
+	for (i = 0; i < a; i++)
 	{
 		ptr[i] = min;
 		min++;
