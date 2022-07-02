@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	{
 		result = malloc((strlen(argv[1]) + strlen(argv[2])) * sizeof(int));
 		if (result == NULL)
-		{	
+		{
 			printf("\n");
 			return (0);
 		}
