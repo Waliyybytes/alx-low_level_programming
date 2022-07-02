@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include "main.h"
-#include <limits.h>
 
 /**
  * _realloc - allocates to n elements size bytes
@@ -39,5 +38,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (new_ptr);
 	}
 	if (new_size == 0 && ptr != NULL)
+	{
+		free(ptr);
 		return (NULL);
+	}
 }
