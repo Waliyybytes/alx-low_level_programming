@@ -28,7 +28,10 @@ int main(int argc, char *argv[])
 	{
 		result = malloc((strlen(argv[1]) + strlen(argv[2])) * sizeof(int));
 		if (result == NULL)
-			return NULL;
+		{	
+			printf("\n");
+			return (0);
+		}
 		*result =  atol(argv[1]) * atol(argv[2]);
 		printf("%lu\n", *result);
 		return (0);
