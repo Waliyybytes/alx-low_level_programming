@@ -14,8 +14,9 @@
 int main(int argc, char *argv[])
 {
 	size_t i;
+	unsigned long int *result;
 
-	for (i = 0; i < strlen(argv[1]) || i < strlen(argv[2]); i++)
+	for (i = 0; i < strlen(argv[1]) && i < strlen(argv[2]); i++)
 	{
 		if (!isdigit(argv[1][i]) || !isdigit(argv[2][i]))
 		{
@@ -25,7 +26,9 @@ int main(int argc, char *argv[])
 	}
 	if (argc == 3)
 	{
-		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+		result = malloc((strlen(argv[1]) + strlen(argv[2])) * sizeof(int));
+		*result =  atol(argv[1]) * atol(argv[2]);
+		printf("%lu\n", *result);
 		return (0);
 	}
 	else
