@@ -12,7 +12,7 @@
 int main(void)
 {
 	char *s = __FILE__;
-	int i = strlen(s);
+	size_t i = strlen(s);
 
 	while (s[i] != '/')
 		i--;
