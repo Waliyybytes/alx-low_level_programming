@@ -19,6 +19,7 @@ int main(void)
 	i++;
 	for (; i < strlen(s); i++)
 		_putchar(s[i]);
+	_putchar('\n');
 	return (0);
 }
 
