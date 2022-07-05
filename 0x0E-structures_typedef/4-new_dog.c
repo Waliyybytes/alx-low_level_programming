@@ -13,12 +13,22 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *jadid;
+	char *d_name, *d_owner;
 
-	jadid = malloc(sizeof(dog_t *));
+	d_owner = malloc(sizeof(owner));
+	d_name = malloc(sizeof(name));
+	jadid = malloc(sizeof(dog_t));
+	if (d_name == NULL)
+		return (NULL);
+	if (d_owner == NULL)
+		return (NULL);
 	if (jadid == NULL)
 		return (NULL);
-	jadid->name = name;
-	jadid->owner = owner;
+	strcpy(d_owner, owner);
+	strcpy(d_name, name);
+
+	jadid->name = d_name;
+	jadid->owner = d_owner;
 	jadid->age = age;
 
 	return (jadid);
