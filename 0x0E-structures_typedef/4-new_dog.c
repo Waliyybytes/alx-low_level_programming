@@ -18,10 +18,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	d_owner = malloc(sizeof(owner));
 	d_name = malloc(sizeof(name));
 	jadid = malloc(sizeof(dog_t));
-	if (d_name == NULL)
-		return (NULL);
-	if (d_owner == NULL)
-		return (NULL);
 	if (jadid == NULL)
 		return (NULL);
 	strcpy(d_owner, owner);
