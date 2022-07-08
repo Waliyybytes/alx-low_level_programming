@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int (*fpt)(int, int);
-	
+
 	fpt = get_op_func(argv[2]);
 
 	if (fpt == NULL)
