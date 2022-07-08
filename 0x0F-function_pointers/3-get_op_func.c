@@ -8,7 +8,7 @@
  * Return: return a pointer to the fucntion indicated by character s
  */
 
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -18,9 +18,9 @@ int (*get_op_func(char *s))(int a, int b)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
+	int i = 0;
 
-	while (ops)
+	while (i < 5)
 	{
 		if (strcmp(s, ops[i].op) == 0)
 			return (ops[i].f);
