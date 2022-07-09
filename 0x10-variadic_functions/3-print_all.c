@@ -21,8 +21,6 @@ void print_all(const char * const format, ...)
 		{'s', print_string}
 	};
 
-	if (format == NULL)
-		rteurn (NULL);
 	va_start(ap, format);
 	j = 0;
 	while (format[j])
