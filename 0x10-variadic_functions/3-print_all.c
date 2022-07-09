@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 		{'f', print_float},
 		{'s', print_string}
 	};
-	
+
 	if (format == NULL)
 		return;
 	va_start(ap, format);
