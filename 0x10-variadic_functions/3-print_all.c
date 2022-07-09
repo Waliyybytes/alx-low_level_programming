@@ -20,7 +20,9 @@ void print_all(const char * const format, ...)
 		{'f', print_float},
 		{'s', print_string}
 	};
-
+	
+	if (format == NULL)
+		return;
 	va_start(ap, format);
 	j = 0;
 	while (format[j])
@@ -71,7 +73,7 @@ void print_integer(va_list ap)
  */
 void print_float(va_list ap)
 {
-	printf("%f", va_arg(ap, double));
+	printf("%g", va_arg(ap, double));
 }
 
 /**
