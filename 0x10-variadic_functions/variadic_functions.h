@@ -12,11 +12,11 @@ void print_strings(const char *separator, const unsigned int n, ...);
 /**
  * struct formt_prnt- struct format
  * @ltr: letter to check
- * @ptr: pointer to function
+ * @p: pointer to function
  */
 
-typedef struct formt_prnt {
-
+typedef struct formt_prnt
+{
 	char ltr;
 	void (*p)(va_list ap);
 } prt_fmt;

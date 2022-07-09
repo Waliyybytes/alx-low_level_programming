@@ -20,7 +20,6 @@ void print_all(const char * const format, ...)
 		{'f', print_float},
 		{'s', print_string}
 	};
-	
 	va_start(ap, format);
 	j = 0;
 	while (format[j])
@@ -85,7 +84,7 @@ void print_string(va_list ap)
 	char *s = va_arg(ap, char *);
 
 	if (s == NULL)
-	{	
+	{
 		printf("%s", "(nil)");
 		exit(EXIT_FAILURE);
 	}
