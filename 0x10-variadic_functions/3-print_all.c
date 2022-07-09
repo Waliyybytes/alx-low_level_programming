@@ -12,6 +12,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
+	char *p = "";
 	unsigned int i = 0, j = 0;
 	prt_fmt print_arr[] = {
 		{'c', print_char},
@@ -19,19 +20,18 @@ void print_all(const char * const format, ...)
 		{'f', print_float},
 		{'s', print_string}
 	};
-
+	
 	va_start(ap, format);
 	while (format)
 	{
 		while (i < 4)
 		{
-			if (print_arr[i].ltr == format[j] && i != (n - 1))
+			if (print_arr[i].ltr == format[j])
 			{
+				printf("%s", p);
 				print_arr[i].p(ap);
-				printf("%s", ", ");
+				p = ", ";
 			}
-			else
-				print_arr[i].p(ap);
 			i++;
 		}
 		j++;
@@ -48,7 +48,7 @@ void print_all(const char * const format, ...)
 
 void print_char(va_list ap)
 {
-	printf("%c", va_arg(ap, char));
+	printf("%c", va_arg(ap, int));
 }
 
 /**

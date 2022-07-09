@@ -18,7 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...);
 typedef struct formt_prnt = {
 
 	char ltr;
-	void (*p)(va_arg ap)
+	void (*p)(va_list ap)
 } prt_fmt;
 
 void print_char(va_list);
