@@ -76,21 +76,3 @@ void print_float(va_list ap)
 	printf("%g", va_arg(ap, double));
 }
 
-/**
- * print_string - to print a string
- * @ap: variadic list
- * Return: nothing
- */
-
-void print_string(va_list ap)
-{
-	char *s = va_arg(ap, char *);
-
-	if (s == NULL)
-	{
-		printf("%s", "(nil)");
-		exit(EXIT_FAILURE);
-	}
-	printf("%s", s);
-}
-
