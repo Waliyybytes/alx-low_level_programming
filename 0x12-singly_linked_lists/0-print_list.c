@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
-
+#include <string.h>
 /**
  * print_list - function
  * @h: a list_t type
