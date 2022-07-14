@@ -3,13 +3,13 @@
 #include "lists.h"
 
 /**
- * list_len - function
+ * print_list - function
  * @h: a list_t type
  *
  * Return: Number of elelments
  */
 
-size_t list_len(const list_t *h)
+size_t print_list(const list_t *h)
 {
 	size_t i = 0;
 
