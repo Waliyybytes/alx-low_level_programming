@@ -11,6 +11,7 @@
 void free_list(list_t *head)
 {
 	list_t *currentNode;
+
 	if (head == NULL)
 	{
 		free(head);
