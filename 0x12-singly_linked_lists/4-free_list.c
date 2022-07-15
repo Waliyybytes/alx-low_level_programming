@@ -8,18 +8,17 @@
  * Return: Nothing
  */
 
-void free_list(list_t *head);
+void free_list(list_t *head)
 {
 	list_t *currentNode;
-
-	if (head == NULL)
-		return;
-	currentNode = *head;
 	while (head->next != NULL)
 	{
 		currentNode = head;
 		head = head->next;
+		free(currentNode->str);
 		free(currentNode);
 	}
+	free(head->str);
+	free(head);
 }
 

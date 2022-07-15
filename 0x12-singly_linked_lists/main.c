@@ -11,19 +11,15 @@
 int main(void)
 {
 	list_t *head;
-	
+
 	head = NULL;
-	add_node(&head, "Anne");
-	add_node(&head, "Colton");
-	add_node(&head, "Corbin");
-	add_node(&head, "Daniel");
-	add_node(&head, "Danton");
-	add_node(&head, "David");
-	add_node(&head, "Gary");
-	add_node(&head, "Holden");
-	add_node(&head, "Ian");
-	add_node(&head, "Timothy");
-	add_node(&head, "Victor");
+	add_node_end(&head, "Bob");
+	add_node_end(&head, "&");
+	add_node_end(&head, "Kris");
+	add_node_end(&head, "love");
+	add_node_end(&head, "asm");
 	print_list(head);
+	free_list(head);
+	head = NULL;
 	return (0);
 }
