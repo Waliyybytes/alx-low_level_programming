@@ -9,10 +9,10 @@
  * Return: address yp new node
  */
 
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *newNode;
-	list_t lastNode;
+	list_t *lastNode;
 
 	newNode = malloc(sizeof(list_t));
 	if (newNode == NULL)
