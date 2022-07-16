@@ -1,5 +1,5 @@
 global main
-extern printf, scanf
+extern printf
 
 section .text
 main:
@@ -18,4 +18,4 @@ main:
     ret 
 section .data
 
-msg: db "Hello, Holberton ",10
+msg: db "Hello, Holberton ",10,0
