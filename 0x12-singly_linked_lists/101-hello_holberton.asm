@@ -1,16 +1,21 @@
-	global	main
-	extern	printf
+global main
+extern printf, scanf
 
-	section .text
+section .text
 main:
-	mov  edx, msg1
-    	mov  esi, 1
-    	mov  edi, fmt
-    	mov  eax, 0
-    	call printf
-	mov  ebx, 0
-    	mov  eax, 1	
+    push rbp           ; Keep the stack aligned
+    mov  rbp, rsp 
+    sub rsp, 16        ;//must be 16 byte increments  to maintain state alignment
 
-	section .data
-msg1:	db	"Hello, Holberton",0
-fmt:    db 	"%s",10,0
+
+    ;write our body
+    xor eax, eax        ;
+    lea rdi, [msg]      ;first parameter
+    call printf
+
+    add rsp, 16 
+    leave               ; mov rsp, rbp
+    ret 
+section .data
+
+msg: db "Hello, Holberton ",10
