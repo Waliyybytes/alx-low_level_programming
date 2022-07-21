@@ -34,6 +34,9 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int j = strlen(b) - 1;
 	unsigned int i = 0, sum = 0;
 
+	if (b == NULL)
+		return (0);
+
 	for (i = 0; i < strlen(b); i++)
 	{
 		if (b[i] != '1' && b[i] != '0')
