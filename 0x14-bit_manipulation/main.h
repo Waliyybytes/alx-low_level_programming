@@ -3,6 +3,5 @@
 
 unsigned int binary_to_uint(const char *b);
 
-unsigned int powint(int x, int y);
 
 #endif

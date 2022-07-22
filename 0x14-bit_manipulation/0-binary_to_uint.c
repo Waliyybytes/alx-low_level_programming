@@ -13,11 +13,12 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int n, digit, dec = 0, i = 0;
+	unsigned int i = 0;
+	unsigned long int n, digit, dec = 0;
 
 	if (b == NULL)
 		return (0);
-	n = atoi(b);
+	n = atol(b);
 	while (n != 0)
 	{
 		digit = n % 10;
