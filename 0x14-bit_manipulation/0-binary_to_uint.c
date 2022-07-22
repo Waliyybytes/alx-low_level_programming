@@ -11,15 +11,16 @@
  * Return: Return unsigned int
  */
 
- unsigned int power(int x , int y)
+unsigned int power(int x, int y)
 {
 	int i;
 	int product = 1;
+
 	for (i = 0; i < y; i++)
 	{
 		product *= x;
 	}
-	return product;
+	return (product);
 }
 
 
@@ -34,7 +35,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned long int i = 0, dec = 0;
 	unsigned long int exp = strlen(b) - 1;
-	
+
 	if (b == NULL)
 		return (0);
 
@@ -42,9 +43,8 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] != '1' && b[i] != '0')
 			return (0);
-		dec += (b[i] - '0') * power(2,exp);
-                exp--;
-
+		dec += (b[i] - '0') * power(2, exp);
+		exp--;
 	}
 	return (dec);
 }
