@@ -9,7 +9,7 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int tmp = n;
+	unsigned long int tmp = sizeof(unsigned long int) * 8;
 	unsigned int count = 1;
 
 	while (tmp >> 1)
