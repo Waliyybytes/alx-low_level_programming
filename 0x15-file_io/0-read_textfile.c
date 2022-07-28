@@ -2,8 +2,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <string.h>
-#include <ctype.h>
+#include <stdlib.h>
 /**
  * read_textfile - read a text file and print to POSIX std output
  * @filename: file's name
@@ -14,8 +13,10 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	char buf[65000];
-	size_t i;
+	char *buf;
+	int rd, wrt;
+
+	buf = malloc(sizeof(char *) * (letters + 1));
 
 	fd = open(filename, O_RDONLY);
 
@@ -24,15 +25,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 
-	read(fd, buf, letters);
+	rd = read(fd, buf, letters);
+	wrt = write(1, buf, rd);
 
-	for (i = 0; i < strlen(buf); i++)
-	{
-		write(1, &buf[i], 1);
-	}
-	if (i < strlen(buf))
+	if (wrt < 0)
 		return (0);
-	return (strlen(buf));
+	return (wrt);
 }
 
 
