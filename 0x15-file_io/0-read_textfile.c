@@ -3,6 +3,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <string.h>
+#include <ctype.h>
 /**
  * read_textfile - read a text file and print to POSIX std output
  * @filename: file's name
@@ -13,8 +14,8 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	char buf[10000];
-	size_t ret = 0, i;
+	char buf[65000];
+	size_t i;
 
 	fd = open(filename, O_RDONLY);
 
@@ -27,10 +28,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	for (i = 0; i < strlen(buf); i++)
 	{
-		ret += write(1, &buf[i], 1);
+		write(1, &buf[i], 1);
 	}
-
-	if (ret != strlen(buf))
+	if (i < strlen(buf))
 		return (0);
 	return (strlen(buf));
 }
+
+
+
