@@ -25,11 +25,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	read(fd, buf, letters);
 
-	for (i = 0; i < strlen(buf) ;i++)
+	for (i = 0; i < strlen(buf); i++)
 	{
 		ret += write(1, &buf[i], 1);
 	}
-	
+
 	if (ret != strlen(buf))
 		return (0);
 	return (strlen(buf));
