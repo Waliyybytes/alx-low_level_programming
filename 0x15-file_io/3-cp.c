@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
 		if (write(fd2, buf, countRead) != countRead)
 		{
 			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+			close(fd1);
 			exit(99);
 		}
 	}
