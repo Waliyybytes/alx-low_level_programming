@@ -21,10 +21,7 @@ int main(int argc, char *argv[])
 	char buf[BUF_SIZE];
 
 	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	fd1 = open(argv[1], O_RDONLY);
 	if (fd1 == -1)
 	{
@@ -47,10 +44,14 @@ int main(int argc, char *argv[])
 		}
 	}
 	if (countRead == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
-	cl2 = close(fd2);
-	cl1 = close(fd1);
-	if (cl1 < 0 || cl2 < 0)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1 || fd2), exit(100);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	cl2 = close(fd2), cl1 = close(fd1);
+	if (cl1 == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1), exit(100);
+	if (cl2 == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2), exit(100);
 	return (1);
 }
