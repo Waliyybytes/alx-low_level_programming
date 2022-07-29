@@ -18,8 +18,10 @@ int create_file(const char *filename, char *text_content)
 	size_t len = strlen(text_content);
 
 	if (text_content == NULL)
+	{
 		text_content = "";
-
+		len = 0;
+	}
 	fd = creat(filename, 0600);
 
 	if (filename == NULL)
