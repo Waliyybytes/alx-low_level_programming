@@ -3,6 +3,10 @@
 #include <stdio.h>
 #include <elf.h>
 #include "display_info.h"
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 /**
  * elf_checker - display information in elf header files
@@ -19,7 +23,7 @@ void elf_checker(unsigned char *e_ident)
 		    e_ident[2] != 'L' &&
 		    e_ident[3] != 'F')
 		{
-			dprintf(STDERR_FILENO, "Error: %s is not an ELF file\n", argv[1]);
+			dprintf(2, "Error: Not an ELF file\n");
 			exit(100);
 		}
 	}
@@ -39,20 +43,20 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 		dprintf(2, "Usage: elf_header elf_filename\n"), exit(97);
 	fd = open(argv[1], O_RDONLY);
-	if (fd1 == -1)
+	if (fd == -1)
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
 	hdr = malloc(sizeof(Elf64_Ehdr));
 	if (!hdr)
 	{
 		close(fd);
-		dprintf(2, "Invalid header type %s\n");
+		dprintf(2, "Invalid header type\n");
 		exit(99);
 	}
 	if (read(fd, hdr, sizeof(Elf64_Ehdr)) ==  -1)
 	{
 		free(hdr);
 		close(fd);
-		dprintf(2, "Error: Invalid file\n", argv[1]);
+		dprintf(2, "Error: %s Invalid file\n", argv[1]);
 		exit(99);
 	}
 	elf_checker(hdr->e_ident);
