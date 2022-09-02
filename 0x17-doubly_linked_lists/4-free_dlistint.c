@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - to add node
+ * free_dlistint - to add node
  * @head: head
  * Return: a linkedlist
  */
@@ -11,6 +11,7 @@
 void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *current;
+
 	if (head == NULL)
 		return;
 	while (head != NULL)
