@@ -2,7 +2,7 @@
 
 /**
  * hash_table_create - creates a hash table of size "size"
- * @size: member 
+ * @size: member
  * Return: returns address of a hash_table
  */
 
