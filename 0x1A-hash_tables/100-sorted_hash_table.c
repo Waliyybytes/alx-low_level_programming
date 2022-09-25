@@ -30,10 +30,9 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 /**
- * add_to_sorted_list - add a node to the sorted (by key's ASCII) linked list
+ * add_node_to_sortedlist - add a node to the sorted linked list
  * @table: the sorted hash table
  * @node: the node to add
- *
  * Return: void
  */
 void add_node_to_sortedlist(shash_table_t *table, shash_node_t *node)
@@ -169,7 +168,7 @@ void shash_table_print(const shash_table_t *ht)
 }
 
 /**
- * hash_table_print- getss element from a hash table
+ * shash_table_print_rev- getss element from a hash table
  * @ht: table to print
  * Return: Nothing
  */
