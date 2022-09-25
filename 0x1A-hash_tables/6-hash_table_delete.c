@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_print- getss element from a hash table
+ * hash_table_delete- getss element from a hash table
  * @ht: table to delete
  * Return: Nothing
  */
@@ -15,7 +15,6 @@ void hash_table_delete(hash_table_t *ht)
 		return;
 	for (i = 0; i < ht->size; i++)
 	{
-	
 		while (ht->array[i] != NULL)
 		{
 			node = ht->array[i]->next;
