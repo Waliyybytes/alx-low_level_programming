@@ -6,6 +6,7 @@ Module Task
 
 
 def island_perimeter(grid):
+  """ Calculates the perimeter of a contiguous island"""
     h, v = 0, 0
     n = len(grid[0])
     m = len(grid)
