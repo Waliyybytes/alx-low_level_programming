@@ -19,7 +19,8 @@ def island_perimeter(grid):
         transposed.append([row[i] for row in grid])
     for i in range(1, m):
         for j in range(1, n):
-            if transposed[i - 1][j - 1:j + 2] in [[1, 1, 0], [0, 1, 1], [1, 1, 1]]:
+            if transposed[i - 1][j - 1:j + 2] in [
+                    [1, 1, 0], [0, 1, 1], [1, 1, 1]]:
                 v += 1
     total = 0
     for i in range(0, m):
